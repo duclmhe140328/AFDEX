@@ -1,0 +1,2354 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <title>AFDEX – Hệ sinh thái Chuỗi Cung cầu Nông sản Việt</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Elfsight AI Chatbot | Untitled AI Chatbot -->
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-3a3009de-e82c-4f96-afcc-50e4a5918610"
+            data-elfsight-app-lazy></div>
+        <!-- Font & AOS -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet"
+            href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+        <style>
+    :root {
+      --bg-dark: #020617;
+      --bg-card: rgba(15, 23, 42, 0.96);
+      --primary: #22c55e;
+      --primary-soft: rgba(34, 197, 94, 0.3);
+      --accent: #38bdf8;
+      --accent-warm: #facc15;
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border-soft: rgba(148, 163, 184, 0.5);
+      --radius-lg: 18px;
+      --shadow-soft: 0 26px 72px rgba(0, 0, 0, 0.95);
+    }
+/* ========== HERO RIGHT – SHOWCASE HÌNH ẢNH ========== */
+
+/* ===== HERO RIGHT 3D IMAGE ===== */
+.nav-cta {
+    padding: 12px 24px;
+    border-radius: 999px;
+    border: none;
+    background: linear-gradient(135deg, #ff4b9f, #7b5cff);
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s;
+  }
+
+  .nav-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.3);
+    filter: brightness(1.05);
+  }
+
+  /* --- Modal overlay --- */
+  .notice-modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top, rgba(255,75,159,0.25), transparent),
+                radial-gradient(circle at bottom, rgba(123,92,255,0.25), transparent),
+                rgba(5,6,22,0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    z-index: 9999;
+  }
+
+  .notice-modal.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* --- Card nội dung --- */
+  .notice-card {
+    position: relative;
+    max-width: 420px;
+    width: 90%;
+    padding: 26px 24px 22px;
+    border-radius: 24px;
+    background: linear-gradient(145deg, rgba(18,18,40,0.9), rgba(32,15,55,0.95));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.55);
+    color: #f8f4ff;
+    animation: popIn 0.28s ease-out;
+    overflow: hidden;
+  }
+
+  .notice-card::before {
+    content: "";
+    position: absolute;
+    inset: -40%;
+    background:
+      radial-gradient(circle at 0 0, rgba(255,75,159,0.25), transparent 55%),
+      radial-gradient(circle at 100% 100%, rgba(123,92,255,0.22), transparent 55%);
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  @keyframes popIn {
+    from {
+      transform: translateY(10px) scale(0.96);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+  }
+
+  /* Nút X đóng */
+  .notice-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 999px;
+    border: none;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d4cff7;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    transition: background 0.2s ease, transform 0.15s ease;
+  }
+
+  .notice-close:hover {
+    background: rgba(255,255,255,0.12);
+    transform: scale(1.05);
+  }
+
+  /* Icon tròn phía trên */
+  .notice-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 18px;
+    background: radial-gradient(circle at 30% 0, #ffe8f4, #ff4b9f);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    box-shadow: 0 12px 25px rgba(255,75,159,0.6);
+  }
+
+  .notice-icon span {
+    font-size: 26px;
+    color: #fff;
+  }
+
+  .notice-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .notice-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #e5defa;
+    margin-bottom: 14px;
+  }
+
+  .notice-highlight {
+    color: #ffb4e0;
+    font-weight: 600;
+  }
+
+  .notice-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    background: rgba(8,10,32,0.7);
+    border: 1px solid rgba(255,255,255,0.06);
+    margin-bottom: 18px;
+    font-size: 13px;
+  }
+
+  .notice-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(87,227,137,0.15);
+    color: #a7f3c6;
+    font-weight: 500;
+    font-size: 12px;
+    width: fit-content;
+  }
+
+  .notice-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #4ade80;
+  }
+
+  .notice-eta {
+    color: #d4cff7;
+  }
+
+  .notice-eta span {
+    font-weight: 600;
+    color: #ffe082;
+  }
+
+  .notice-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .notice-later {
+    background: transparent;
+    border: none;
+    color: #c4bedf;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 8px 10px;
+  }
+
+  .notice-later:hover {
+    text-decoration: underline;
+  }
+
+  .notice-ok {
+    border: none;
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff4b9f, #ff9f68);
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s;
+  }
+
+  .notice-ok:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.45);
+  }
+
+  @media (max-width: 480px) {
+    .notice-card {
+      padding: 22px 18px 18px;
+      border-radius: 20px;
+    }
+    .notice-title {
+      font-size: 18px;
+    }
+  }
+.hero-right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.af-hero-showcase {
+  position: relative;
+  width: 100%;
+  max-width: 430px;
+  aspect-ratio: 4 / 3;
+  transform-style: preserve-3d;
+}
+
+/* vòng tròn glow phía sau */
+.af-hero-ring {
+  position: absolute;
+  inset: 6% 0;
+  margin: auto;
+  max-width: 360px;
+  aspect-ratio: 1 / 1;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  box-shadow:
+    0 0 40px rgba(34, 197, 94, 0.25),
+    0 0 90px rgba(56, 189, 248, 0.25);
+  background:
+    radial-gradient(circle at 20% 0%, rgba(34, 197, 94, 0.28), transparent 55%),
+    radial-gradient(circle at 80% 10%, rgba(56, 189, 248, 0.22), transparent 60%);
+  opacity: 0.9;
+  animation: afRingRotate 20s linear infinite;
+}
+
+/* card chính 3D */
+.af-hero-main-card {
+  position: absolute;
+  inset: 7% 7%;
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid rgba(190, 242, 100, 0.9);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.95);
+  transform-style: preserve-3d;
+  background: #020617;
+  transform: rotate3d(1, -1, 0, 12deg) translateY(0);
+  animation: afMainCardTilt 12s ease-in-out infinite alternate;
+}
+
+.af-hero-main-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.08);
+  filter: saturate(1.05) contrast(1.05);
+}
+
+/* gradient phủ + shine */
+.af-hero-main-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(15, 23, 42, 0.85), transparent 55%),
+    radial-gradient(circle at 0 100%, rgba(34, 197, 94, 0.32), transparent 60%);
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.af-hero-main-card::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.45), transparent 55%);
+  mix-blend-mode: screen;
+  transform: translateX(-130%);
+  animation: afMainCardShine 4.6s ease-in-out infinite;
+}
+
+/* chip trên cùng */
+.af-hero-chip-top {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  padding: 0.24rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(3, 7, 18, 0.92);
+  border: 1px solid rgba(148, 163, 184, 0.85);
+  font-size: 0.76rem;
+  color: #e5e7eb;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  z-index: 2;
+  animation: afChipPulse 3s ease-in-out infinite;
+}
+
+.af-hero-chip-top .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #22c55e;
+  box-shadow: 0 0 10px rgba(34, 197, 94, 1);
+}
+
+/* strip text nhỏ */
+.af-hero-chip-bottom {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid rgba(56, 189, 248, 0.75);
+  font-size: 0.78rem;
+  color: #e5e7eb;
+  text-align: left;
+}
+
+/* chip nổi hai bên */
+.af-hero-floating-tag {
+  position: absolute;
+  max-width: 190px;
+  padding: 0.4rem 0.8rem;
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.96);
+  border: 1px solid rgba(148, 163, 184, 0.9);
+  font-size: 0.74rem;
+  color: #cbd5e1;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.95);
+}
+
+.af-hero-floating-tag--left {
+  left: -4px;
+  bottom: 12%;
+  animation: afFloatLeft 9s ease-in-out infinite alternate;
+}
+
+.af-hero-floating-tag--right {
+  right: -4px;
+  top: 10%;
+  text-align: right;
+  animation: afFloatRight 10s ease-in-out infinite alternate;
+}
+
+/* hover nghiêng mạnh hơn */
+.af-hero-main-card:hover {
+  transform: rotate3d(1, -1, 0, 16deg) translateY(-4px) scale(1.02);
+  transition: transform 0.35s ease-out;
+}
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes afRingRotate {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes afMainCardTilt {
+  0%   { transform: rotate3d(1,-1,0,12deg) translateY(2px); }
+  50%  { transform: rotate3d(0.7,-0.8,0,7deg) translateY(-4px); }
+  100% { transform: rotate3d(1,-0.6,0,10deg) translateY(0); }
+}
+
+@keyframes afMainCardShine {
+  0%   { transform: translateX(-130%); }
+  40%  { transform: translateX(130%); }
+  100% { transform: translateX(130%); }
+}
+
+@keyframes afChipPulse {
+  0%, 100% { box-shadow: 0 0 0 rgba(74, 222, 128, 0); }
+  50%      { box-shadow: 0 0 16px rgba(74, 222, 128, 0.7); }
+}
+
+@keyframes afFloatLeft {
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(10px, -8px, 0); }
+}
+
+@keyframes afFloatRight {
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-10px, 8px, 0); }
+}
+
+/* responsive */
+@media (max-width: 980px) {
+  .af-hero-showcase {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .af-hero-showcase {
+    max-width: 330px;
+  }
+  .af-hero-floating-tag--left {
+    left: 0;
+    bottom: 10%;
+  }
+  .af-hero-floating-tag--right {
+    right: 0;
+  }
+}
+
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #022c22 0, #020617 40%, #000 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+      opacity: 0;
+      transition: opacity 0.9s ease-out;
+    }
+    body.is-loaded { opacity: 1; }
+
+    .scroll-progress {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 3px;
+      z-index: 60;
+      pointer-events: none;
+    }
+    .scroll-progress-inner {
+      height: 100%;
+      width: 100%;
+      transform-origin: left;
+      transform: scaleX(0);
+      background: linear-gradient(to right,#22c55e,#facc15,#38bdf8);
+      box-shadow: 0 0 12px rgba(34,197,94,0.9);
+    }
+
+    .bg-gradients {
+      position: fixed;
+      inset: 0;
+      z-index: -3;
+      background:
+        radial-gradient(circle at 8% 0%, rgba(56,189,248,0.32), transparent 60%),
+        radial-gradient(circle at 90% 20%, rgba(34,197,94,0.24), transparent 60%),
+        radial-gradient(circle at 0% 100%, rgba(250,204,21,0.18), transparent 60%);
+      animation: floatGradient 18s ease-in-out infinite alternate;
+    }
+    @keyframes floatGradient {
+      0%   { transform: translate3d(0,0,0) scale(1); }
+      50%  { transform: translate3d(0,-10px,0) scale(1.02); }
+      100% { transform: translate3d(-14px,10px,0) scale(1.04); }
+    }
+
+    .noise {
+      position: fixed;
+      inset: 0;
+      opacity: .23;
+      mix-blend-mode: soft-light;
+      pointer-events: none;
+      z-index: -2;
+      background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    }
+
+    .orb {
+      position: fixed;
+      border-radius: 999px;
+      filter: blur(2px);
+      opacity: .25;
+      pointer-events: none;
+      z-index: -1;
+      animation: floatOrb 24s ease-in-out infinite alternate;
+    }
+    .orb.orb-1 {
+      width: 200px; height: 200px;
+      top: 10%; left: -40px;
+      background: radial-gradient(circle, rgba(34,197,94,0.9), transparent 60%);
+    }
+    .orb.orb-2 {
+      width: 150px; height: 150px;
+      bottom: 8%; right: 2%;
+      background: radial-gradient(circle, rgba(56,189,248,0.85), transparent 60%);
+      animation-delay: -6s;
+    }
+    .orb.orb-3 {
+      width: 140px; height: 140px;
+      top: 55%; right: -30px;
+      background: radial-gradient(circle, rgba(250,204,21,0.85), transparent 60%);
+      animation-delay: -12s;
+    }
+    @keyframes floatOrb {
+      0%   { transform: translate3d(0,0,0); }
+      50%  { transform: translate3d(16px,-14px,0); }
+      100% { transform: translate3d(-10px,18px,0); }
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.4rem 1.25rem 4rem;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(15,23,42,0.98), rgba(15,23,42,0.55), transparent);
+      border-bottom: 1px solid rgba(30,64,175,0.6);
+      transition: background 0.15s, box-shadow 0.15s;
+    }
+    header.header-scrolled {
+      background: rgba(15,23,42,0.98);
+      box-shadow: 0 18px 55px rgba(2,6,23,0.98);
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: .65rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+    }
+    .brand-logo {
+      width: 40px; height: 40px;
+      border-radius: 999px;
+      padding: 2px;
+      background: conic-gradient(from 180deg,#22c55e,#facc15,#38bdf8,#22c55e);
+      position: relative;
+      overflow: hidden;
+    }
+    .brand-logo::after {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: linear-gradient(120deg, rgba(255,255,255,.4), transparent 55%);
+      transform: translateX(-120%);
+      animation: logoShine 3.1s ease-in-out infinite;
+    }
+    @keyframes logoShine {
+      0% { transform: translateX(-120%); }
+      35% { transform: translateX(120%); }
+      100% { transform: translateX(120%); }
+    }
+    .brand-logo-inner {
+      width: 100%; height: 100%;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #022c22, #020617);
+      display: flex; align-items: center; justify-content: center;
+      color: #e5e7eb;
+      font-size: .85rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+    }
+    .brand-text {
+      display: flex; flex-direction: column; gap: .05rem;
+    }
+    .brand-text strong {
+      font-size: 1rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .brand-text span {
+      font-size: .75rem;
+      color: var(--text-muted);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.1rem;
+      font-size: .82rem;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      padding-bottom: 2px;
+      position: relative;
+      cursor: pointer;
+    }
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0; bottom: 0;
+      height: 2px; width: 0;
+      background: linear-gradient(to right,var(--primary),var(--accent));
+      border-radius: 999px;
+      transition: width 0.18s;
+    }
+    .nav-links a:hover {
+      color: var(--text-main);
+    }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-cta {
+      border-radius: 999px;
+      border: 1px solid var(--primary-soft);
+      padding: .45rem .95rem;
+      font-size: .8rem;
+      background: radial-gradient(circle at 0 0, rgba(34,197,94,0.28), transparent);
+      color: #bbf7d0;
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      cursor: pointer;
+      transition: all 0.18s;
+    }
+    .nav-cta:hover {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 1px rgba(34,197,94,0.38);
+      transform: translateY(-1px);
+    }
+
+    main { margin-top: 1.4rem; }
+
+    .section-divider {
+      height: 1px;
+      margin: 2.4rem 0 0.4rem;
+      background: linear-gradient(to right, transparent, rgba(148,163,184,0.7), transparent);
+      opacity: .45;
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0,2.1fr) minmax(0,1.9fr);
+      gap: 2.4rem;
+      padding: 2.1rem 1.5rem 2.6rem;
+      border-radius: 34px;
+      background:
+        radial-gradient(circle at 0 0, rgba(56,189,248,0.16), transparent 60%),
+        radial-gradient(circle at 100% 100%, rgba(34,197,94,0.2), transparent 70%),
+        linear-gradient(135deg,#020617,#020617 32%,#020b29);
+      box-shadow: 0 40px 80px rgba(0,0,0,0.9);
+      border: 1px solid rgba(148,163,184,0.5);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(135deg,rgba(148,163,184,0.18) 1px,transparent 1px),
+        linear-gradient(225deg,rgba(15,23,42,0.8) 1px,transparent 1px);
+      background-size: 30px 30px;
+      mix-blend-mode: soft-light;
+      opacity: .18;
+      pointer-events: none;
+    }
+    .hero-left, .hero-right { position: relative; z-index: 1; }
+
+    .badge-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      border-radius: 999px;
+      padding: .25rem .75rem;
+      font-size: .78rem;
+      border: 1px solid rgba(34,197,94,0.8);
+      background: rgba(3,7,18,0.9);
+      color: var(--text-muted);
+      margin-bottom: .5rem;
+    }
+    .badge-dot {
+      width: 9px; height: 9px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 10px rgba(34,197,94,1);
+    }
+    .badge-tag {
+      padding: .12rem .55rem;
+      border-radius: 999px;
+      background: rgba(250,204,21,0.18);
+      border: 1px solid rgba(250,204,21,0.75);
+      color: #fef9c3;
+      font-size: .7rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem,3.2vw,2.8rem);
+      font-weight: 750;
+      margin-bottom: .55rem;
+    }
+    .hero-title span {
+      background: linear-gradient(120deg,#bbf7d0,#22c55e,#38bdf8);
+      -webkit-background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 18px rgba(34,197,94,0.35);
+    }
+
+    .hero-sub {
+      font-size: .96rem;
+      color: var(--text-muted);
+      max-width: 560px;
+      margin-bottom: 1.1rem;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .45rem;
+      margin-bottom: 1.1rem;
+      font-size: .78rem;
+    }
+    .hero-tag {
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.7);
+      background: rgba(2,6,23,0.98);
+      padding: .22rem .6rem;
+    }
+
+    .hero-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-bottom: 1.2rem;
+      font-size: .82rem;
+    }
+    .metric strong {
+      display: block;
+      font-size: 1.35rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .8rem;
+    }
+
+    .btn-primary, .btn-ghost {
+      border-radius: 999px;
+      padding: .7rem 1.35rem;
+      font-size: .86rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      transition: all .2s;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: linear-gradient(120deg,#bef264,#22c55e);
+      color: #052e16;
+      box-shadow: 0 18px 36px rgba(34,197,94,0.4);
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 26px 56px rgba(34,197,94,0.55);
+    }
+    .btn-ghost {
+      background: rgba(15,23,42,0.98);
+      color: var(--text-main);
+      border-color: rgba(148,163,184,0.7);
+    }
+    .btn-ghost:hover {
+      border-color: var(--primary);
+      color: #bbf7d0;
+      background: rgba(3,7,18,0.98);
+    }
+
+    /* HERO RIGHT – bảng phân tích */
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      gap: .9rem;
+    }
+
+    .hero-insights {
+      border-radius: 26px;
+      padding: 1.1rem 1.05rem 1.25rem;
+      background:
+        radial-gradient(circle at 0 0, rgba(34,197,94,0.24), transparent 60%),
+        radial-gradient(circle at 100% 0, rgba(56,189,248,0.18), transparent 60%),
+        rgba(3,7,18,0.98);
+      border: 1px solid rgba(190,242,100,0.8);
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: .9rem;
+    }
+
+    .insights-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: .6rem;
+    }
+    .insights-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      font-size: .7rem;
+      padding: .18rem .6rem;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.98);
+      border: 1px solid rgba(148,163,184,0.7);
+      color: #e5e7eb;
+      margin-bottom: .25rem;
+    }
+    .insights-pill::before {
+      content: "";
+      width: 7px; height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 8px rgba(34,197,94,1);
+    }
+    .insights-header h3 {
+      font-size: .96rem;
+      font-weight: 600;
+    }
+    .insights-date {
+      font-size: .76rem;
+      color: var(--text-muted);
+      padding-top: .35rem;
+    }
+
+    .insights-metrics {
+      display: grid;
+      grid-template-columns: repeat(3,minmax(0,1fr));
+      gap: .7rem;
+    }
+    .insight-card {
+      background: radial-gradient(circle at top, rgba(15,23,42,1), #020617);
+      border-radius: 16px;
+      padding: .55rem .6rem;
+      border: 1px solid rgba(30,64,175,0.7);
+      font-size: .78rem;
+    }
+    .insight-label {
+      font-size: .74rem;
+      color: var(--text-muted);
+    }
+    .insight-value-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: .2rem;
+    }
+    .insight-value {
+      font-size: 1.12rem;
+      font-weight: 600;
+    }
+    .insight-chip {
+      font-size: .7rem;
+      padding: .16rem .48rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.7);
+      background: rgba(15,23,42,1);
+    }
+    .chip-green { border-color: rgba(34,197,94,0.8); color: #bbf7d0; }
+    .chip-yellow{ border-color: rgba(250,204,21,0.85); color: #fef3c7; }
+    .chip-blue { border-color: rgba(56,189,248,0.85); color: #e0f2fe; }
+
+    .insight-bar {
+      margin-top: .32rem;
+      height: 4px;
+      border-radius: 999px;
+      background: rgba(15,23,42,1);
+      overflow: hidden;
+    }
+    .insight-bar-inner {
+      --progress: 0.6;
+      width: 100%; height: 100%;
+      transform-origin: left;
+      transform: scaleX(var(--progress));
+      background: linear-gradient(to right,#22c55e,#a3e635);
+      box-shadow: 0 0 10px rgba(34,197,94,0.8);
+      transition: transform 0.9s ease-out;
+    }
+    .bar-yellow { background: rgba(30,64,175,1); }
+    .bar-yellow .insight-bar-inner {
+      background: linear-gradient(to right,#facc15,#fb923c);
+    }
+    .bar-blue .insight-bar-inner {
+      background: linear-gradient(to right,#38bdf8,#0ea5e9);
+    }
+    .insight-sub {
+      display: block;
+      margin-top: .25rem;
+      font-size: .72rem;
+      color: var(--text-muted);
+    }
+
+    .insights-charts {
+      display: grid;
+      grid-template-columns: minmax(0,1.2fr) minmax(0,1fr);
+      gap: .8rem;
+    }
+    .chart-card {
+      background: radial-gradient(circle at top, rgba(15,23,42,1), #020617);
+      border-radius: 18px;
+      border: 1px solid rgba(148,163,184,0.7);
+      padding: .65rem .7rem;
+      font-size: .78rem;
+    }
+    .chart-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .4rem;
+      margin-bottom: .4rem;
+    }
+    .chart-title {
+      font-size: .8rem;
+      font-weight: 500;
+    }
+    .chart-tag {
+      font-size: .7rem;
+      padding: .1rem .45rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.7);
+      color: var(--text-muted);
+    }
+
+    .chart-bars {
+      display: flex;
+      align-items: flex-end;
+      gap: .5rem;
+      height: 120px;
+    }
+    .chart-bar {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .chart-bar-inner {
+      width: 100%;
+      border-radius: 999px 999px 6px 6px;
+      background: linear-gradient(to top,#22c55e,#a3e635);
+      height: calc(var(--h) * 100%);
+      box-shadow: 0 12px 18px rgba(22,163,74,0.5);
+      transform-origin: bottom;
+      transform: scaleY(0);
+      animation: chartGrow 1s ease-out forwards;
+    }
+    .chart-bar-label {
+      font-size: .7rem;
+      color: var(--text-muted);
+      margin-top: .25rem;
+      text-align: center;
+    }
+    @keyframes chartGrow { to { transform: scaleY(1); } }
+
+    .donut-card { display: flex; flex-direction: column; }
+
+    .donut-wrap {
+      display: flex;
+      align-items: center;
+      gap: .8rem;
+    }
+    .donut-mini {
+      width: 90px; height: 90px;
+      border-radius: 50%;
+      background: conic-gradient(
+        from -90deg,
+        #22c55e 0 45%,
+        #facc15 45% 75%,
+        #0ea5e9 75% 100%
+      );
+      position: relative;
+      flex-shrink: 0;
+    }
+    .donut-mini::after {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border-radius: 50%;
+      background: #020617;
+    }
+    .donut-hole {
+      position: absolute;
+      inset: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .72rem;
+      color: #e5e7eb;
+    }
+    .donut-legend {
+      font-size: .74rem;
+      display: grid;
+      gap: .25rem;
+    }
+    .legend-row {
+      display: flex;
+      align-items: center;
+      gap: .3rem;
+    }
+    .legend-dot {
+      width: 9px; height: 9px;
+      border-radius: 999px;
+    }
+    .legend-green{ background:#22c55e; }
+    .legend-yellow{ background:#facc15; }
+    .legend-blue{ background:#0ea5e9; }
+
+    /* COMMON SECTIONS */
+    section { margin-top: 3.2rem; }
+
+    .section-header {
+      margin-bottom: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: .15rem;
+    }
+    .section-kicker {
+      font-size: .75rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: #bef264;
+    }
+    .section-title {
+      font-size: 1.22rem;
+      font-weight: 600;
+    }
+    .section-desc {
+      font-size: .88rem;
+      color: var(--text-muted);
+      max-width: 720px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: minmax(0,1.3fr) minmax(0,1.1fr);
+      gap: 1.6rem;
+    }
+
+    .card {
+      border-radius: var(--radius-lg);
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      padding: 1.05rem 1.1rem;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+      font-size: .86rem;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at 0 0, rgba(34,197,94,0.22), transparent 60%);
+      opacity: 0;
+      transform: translate3d(-10px,-10px,0);
+      transition: opacity .3s, transform .3s;
+    }
+    .card:hover::before {
+      opacity: 1;
+      transform: translate3d(0,0,0);
+    }
+    .card-title-sm {
+      font-size: .96rem;
+      font-weight: 600;
+      margin-bottom: .4rem;
+    }
+
+    .list {
+      list-style: none;
+      display: grid;
+      gap: .3rem;
+    }
+    .list li {
+      display: flex;
+      gap: .4rem;
+      align-items: flex-start;
+    }
+    .list-bullet {
+      margin-top: .32rem;
+      width: 6px; height: 6px;
+      border-radius: 999px;
+      background: linear-gradient(to right,var(--primary),var(--accent-warm));
+      box-shadow: 0 0 0 4px rgba(34,197,94,0.16);
+      flex-shrink: 0;
+    }
+
+    /* Vision / Mission blocks */
+    .vision-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+      gap: 1.1rem;
+    }
+    .vision-card {
+      border-radius: 20px;
+      padding: 1rem;
+      background: radial-gradient(circle at top left, rgba(56,189,248,0.14), rgba(15,23,42,0.98));
+      border: 1px solid rgba(148,163,184,0.7);
+      font-size: .86rem;
+      box-shadow: var(--shadow-soft);
+    }
+    .vision-label {
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      color: #bfdbfe;
+      margin-bottom: .25rem;
+    }
+
+    /* HP4 ecosystem */
+    .eco-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+      gap: 1.1rem;
+    }
+    .eco-card {
+      border-radius: 20px;
+      padding: 1rem;
+      background: radial-gradient(circle at top left, rgba(34,197,94,0.16), rgba(15,23,42,0.98));
+      border: 1px solid rgba(148,163,184,0.7);
+      font-size: .84rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+    }
+    .eco-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      font-size: .74rem;
+      padding: .2rem .6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.75);
+      background: rgba(3,7,18,0.98);
+      margin-bottom: .35rem;
+    }
+    .eco-dot {
+      width: 7px; height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+    .eco-title {
+      font-size: .96rem;
+      font-weight: 600;
+      margin-bottom: .2rem;
+    }
+    .eco-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: .25rem;
+      font-size: .75rem;
+      padding: .14rem .55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.7);
+      background: rgba(15,23,42,0.96);
+      margin-bottom: .3rem;
+    }
+
+    /* TIMELINE */
+    .timeline-wrapper {
+      border-radius: 24px;
+      padding: 1.3rem 1.3rem 1.1rem;
+      background: radial-gradient(circle at 0 0, rgba(56,189,248,0.24), transparent 60%), rgba(15,23,42,0.98);
+      border: 1px solid rgba(148,163,184,0.7);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+    .timeline-line {
+      position: absolute;
+      left: 1.4rem; right: 1.4rem; top: 50%;
+      height: 2px;
+      background: linear-gradient(to right, rgba(148,163,184,0.3), rgba(34,197,94,0.9), rgba(148,163,184,0.3));
+      opacity: .7;
+    }
+    .timeline-steps {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.4rem;
+      z-index: 1;
+    }
+    .timeline-step {
+      min-width: 150px;
+      max-width: 210px;
+      display: flex;
+      flex-direction: column;
+      gap: .2rem;
+      animation: roadmapFloat 4.5s ease-in-out infinite alternate;
+    }
+    .timeline-step:nth-child(2){ animation-delay: -1s; }
+    .timeline-step:nth-child(3){ animation-delay: -2s; }
+    .timeline-step:nth-child(4){ animation-delay: -3s; }
+    .timeline-dot {
+      width: 20px; height: 20px;
+      border-radius: 999px;
+      background: radial-gradient(circle,#bbf7d0,#22c55e);
+      box-shadow: 0 0 0 6px rgba(34,197,94,0.22),0 0 20px rgba(34,197,94,0.8);
+      border: 2px solid #052e16;
+    }
+    .timeline-year {
+      font-size: .8rem;
+      font-weight: 600;
+    }
+    .timeline-label {
+      font-size: .78rem;
+      color: var(--text-muted);
+    }
+    @keyframes roadmapFloat {
+      0% { transform: translateY(0); }
+      100%{ transform: translateY(-6px); }
+    }
+
+    /* PARTNERS / ACHIEVEMENTS */
+    .partner-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 1.1rem;
+    }
+    .partner-card {
+      border-radius: 20px;
+      padding: 1rem;
+      background: radial-gradient(circle at top left, rgba(251,191,36,0.14), rgba(15,23,42,0.98));
+      border: 1px solid rgba(148,163,184,0.7);
+      font-size: .84rem;
+      box-shadow: var(--shadow-soft);
+    }
+    .partner-title {
+      font-size: .94rem;
+      font-weight: 600;
+      margin-bottom: .25rem;
+    }
+    .badge-mini {
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      padding: .16rem .55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.75);
+      font-size: .72rem;
+      margin-bottom: .3rem;
+    }
+
+    /* PRODUCT GROUPS */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+      gap: 1.1rem;
+    }
+    .product-card {
+      border-radius: 20px;
+      padding: 1rem;
+      background: radial-gradient(circle at top left, rgba(59,130,246,0.16), rgba(15,23,42,0.98));
+      border: 1px solid rgba(148,163,184,0.7);
+      font-size: .84rem;
+      box-shadow: var(--shadow-soft);
+    }
+    .product-title {
+      font-size: .94rem;
+      font-weight: 600;
+      margin-bottom: .25rem;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: grid;
+      gap: .8rem;
+      font-size: .86rem;
+    }
+    .faq-item {
+      border-radius: 16px;
+      border: 1px solid rgba(148,163,184,0.7);
+      background: rgba(15,23,42,0.98);
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: .65rem .8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    .faq-question span { font-weight: 500; }
+    .faq-toggle { font-size: 1rem; opacity: .7; }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 .8rem;
+      transition: max-height .25s, padding-bottom .25s;
+      color: var(--text-muted);
+      font-size: .82rem;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 220px;
+      padding-bottom: .6rem;
+    }
+
+    /* CTA */
+    .cta {
+      margin-top: 3rem;
+      border-radius: 24px;
+      padding: 1.5rem 1.4rem;
+      border: 1px solid rgba(34,197,94,0.55);
+      background: radial-gradient(circle at top left, rgba(34,197,94,0.32), rgba(15,23,42,0.98));
+      box-shadow: var(--shadow-soft);
+      text-align: center;
+      font-size: .86rem;
+      color: var(--text-muted);
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 2.5rem;
+      padding: 2.2rem 1.25rem 1.6rem;
+      background: radial-gradient(circle at top left, rgba(34,197,94,0.16), rgba(2,6,23,1));
+      border-top: 1px solid rgba(15,23,42,0.95);
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0,1.4fr) minmax(0,2fr);
+      gap: 2rem;
+      font-size: .84rem;
+    }
+    .footer-brand-title {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .footer-brand-desc {
+      font-size: .83rem;
+      color: var(--text-muted);
+      max-width: 360px;
+      margin-top: .35rem;
+    }
+    .footer-cols {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+      gap: 1.2rem;
+    }
+    .footer-col-title {
+      font-size: .85rem;
+      font-weight: 600;
+      margin-bottom: .4rem;
+    }
+    .footer-list {
+      list-style: none;
+      display: grid;
+      gap: .28rem;
+      font-size: .8rem;
+    }
+    .footer-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .footer-link:hover { color: #e5e7eb; }
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 1.6rem auto 0;
+      border-top: 1px solid rgba(31,41,55,0.95);
+      padding-top: .8rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .8rem;
+      justify-content: space-between;
+      font-size: .78rem;
+      color: var(--text-muted);
+    }
+    .footer-badges-row {
+      display: flex;
+      gap: .4rem;
+      flex-wrap: wrap;
+    }
+    .footer-chip {
+      padding: .12rem .55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(75,85,99,0.9);
+      background: rgba(15,23,42,0.98);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 980px){
+      .hero {
+        grid-template-columns: minmax(0,1fr);
+        padding: 1.8rem 1.2rem 2.2rem;
+      }
+      .hero-right { order: -1; }
+      .insights-metrics { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .insights-charts  { grid-template-columns: minmax(0,1fr); }
+    }
+    @media (max-width: 768px){
+      .nav-links { display: none; }
+      section { margin-top: 3rem; }
+      .grid-2 { grid-template-columns: minmax(0,1fr); }
+      .timeline-line { display: none; }
+      .timeline-steps { justify-content: flex-start; }
+      .footer-inner { grid-template-columns: minmax(0,1fr); }
+    }
+    @media (max-width: 560px){
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .btn-primary, .btn-ghost { width: 100%; justify-content: center; }
+      .insights-metrics { grid-template-columns: minmax(0,1fr); }
+    }
+  </style>
+    </head>
+
+    <body>
+        <div class="scroll-progress"><div class="scroll-progress-inner"
+                id="scrollProgress"></div></div>
+        <div class="bg-gradients"></div>
+        <div class="noise"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+
+        <header id="siteHeader">
+            <nav class="nav">
+                <div class="brand">
+                    <div class="brand-logo"><div
+                            class="brand-logo-inner">AF</div></div>
+                    <div class="brand-text">
+                        <strong>AFDEX</strong>
+                        <span>Chuỗi Cung cầu Nông sản Việt</span>
+                    </div>
+                </div>
+
+                <div class="nav-links">
+                    <a href="#tong-quan">Giới thiệu</a>
+                    <a href="#tam-nhin">Tầm nhìn</a>
+                    <a href="#hp4">Mô hình HP4</a>
+                    <a href="#doi-tac">Đối tác</a>
+                    <a href="#san-pham">Ngành hàng</a>
+                    <a href="#lo-trinh">Mốc thời gian</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+
+                <button class="nav-cta"
+                    onclick="openNotice()">
+                    Vào Website của chúng tôi →
+                </button>
+            </nav>
+        </header>
+
+        <main class="container">
+            <!-- HERO -->
+            <section class="hero" id="top" data-aos="fade-up"
+                data-aos-duration="900">
+                <div class="hero-left">
+                    <div class="badge-hero">
+                        <span class="badge-dot"></span>
+                        Công ty Cổ phần Hệ sinh thái AFDEX
+                        <span class="badge-tag">Phố Chợ</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Số hóa dòng chảy <span>nông sản & sinh thái</span> trên
+                        cùng một nền tảng.
+                    </h1>
+
+                    <p class="hero-sub">
+                        AFDEX là hệ sinh thái điều phối 60 “Chuỗi Cung cầu Nông
+                        sản Việt”, dựa trên hơn 10 năm nghiên cứu
+                        và xây dựng cơ sở dữ liệu nông nghiệp – từ <strong>Niên
+                            giám Nông nghiệp Thực phẩm Việt Nam 2010</strong>
+                        đến nền tảng nông nghiệp số tích hợp đa giá trị ngày
+                        nay.
+                    </p>
+
+                    <div class="hero-tags">
+                        <div class="hero-tag">Nông nghiệp sinh thái đa giá trị
+                            (MEA)</div>
+                        <div class="hero-tag">Cơ chế HP4 – High Potential /
+                            Partnership / Profit / Priority</div>
+                        <div class="hero-tag">Lồng ghép Chương trình Nông thôn
+                            mới</div>
+                    </div>
+
+                    <div class="hero-metrics">
+                        <div class="metric">
+                            <strong>60</strong>
+                            <span>Chuỗi Cung cầu Nông sản Việt được quy
+                                hoạch.</span>
+                        </div>
+                        <div class="metric">
+                            <strong>9 tầng</strong>
+                            <span>Hệ thống thông tin quản trị, truy xuất đến tận
+                                Điểm Sàn cơ sở.</span>
+                        </div>
+                        <div class="metric">
+                            <strong>10+ năm</strong>
+                            <span>Nghiên cứu, thử nghiệm & hợp tác cùng
+                                Bộ/Ngành, HTX, trường ĐH.</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions">
+                        <button class="btn-primary"
+                            onclick="document.getElementById('tam-nhin').scrollIntoView({behavior:'smooth'})">
+                            Xem Tầm nhìn & Sứ mệnh 🌱
+                        </button>
+                        <button class="btn-ghost"
+                            onclick="document.getElementById('hp4').scrollIntoView({behavior:'smooth'})">
+                            Khám phá mô hình HP4 & 4 hợp phần
+                        </button>
+                    </div>
+                </div>
+
+                <!-- HERO RIGHT -->
+                <div class="hero-right" data-aos="zoom-in-left"
+                    data-aos-duration="900">
+                    <div class="af-hero-showcase">
+                        <!-- vòng glow phía sau -->
+                        <div class="af-hero-ring"></div>
+
+                        <!-- CARD CHÍNH: ẢNH PEXELS 3D -->
+                        <div class="af-hero-main-card">
+                            <img
+                                src="https://images.pexels.com/photos/2255801/pexels-photo-2255801.jpeg"
+                                alt="AFDEX - Nền tảng nông nghiệp số"
+                                class="af-hero-main-photo" />
+
+                            <!-- lớp gradient phủ lên ảnh -->
+                            <div class="af-hero-main-overlay"></div>
+
+                            <!-- chip trên cùng -->
+                            <div class="af-hero-chip-top">
+                                <span class="dot"></span>
+                                AFDEX • Hệ sinh thái nông nghiệp số
+                            </div>
+
+                            <!-- strip text nhỏ dưới cùng -->
+                            <div class="af-hero-chip-bottom">
+                                Số hoá dòng chảy nông sản &amp; tài chính từ
+                                vùng nguyên liệu đến thị trường.
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+            </section>
+<div id="project-notice" class="notice-modal"
+                    onclick="overlayClick(event)">
+                    <div class="notice-card">
+                        <button class="notice-close" onclick="closeNotice()"
+                            aria-label="Đóng thông báo">&times;</button>
+
+                        <div class="notice-icon">
+                            <span>🚀</span>
+                        </div>
+
+                        <div class="notice-title">Dự án đang triển khai đúng lộ
+                            trình</div>
+
+                        <div class="notice-text">
+                            Phần mềm hiện đang được đội ngũ phát triển <span
+                                class="notice-highlight">triển khai theo đúng kế
+                                hoạch</span>.
+                            Mọi hạng mục kỹ thuật và trải nghiệm người dùng đang
+                            được hoàn thiện từng bước.
+                        </div>
+
+                        <div class="notice-timeline">
+                            <div class="notice-badge">
+                                <span class="notice-dot"></span>
+                                Đang trong giai đoạn hoàn thiện &amp; thử nghiệm
+                                nội bộ
+                            </div>
+                            <div class="notice-eta">
+                                Dự kiến hoàn tất: <span>tháng 12/2025</span>
+                            </div>
+                        </div>
+
+                        <div class="notice-footer">
+                            <button class="notice-later"
+                                onclick="closeNotice()">Để sau</button>
+                            <button class="notice-ok"
+                                onclick="closeNotice()">Tôi đã hiểu</button>
+                        </div>
+                    </div>
+                </div>
+            <div class="section-divider"></div>
+
+            <!-- INTRO -->
+            <section id="tong-quan" data-aos="fade-up" data-aos-duration="900">
+                <div class="section-header">
+                    <span class="section-kicker">Giới thiệu dự án</span>
+                    <h2 class="section-title">AFDEX – Từ “Phố Chợ Cổ” đến Hệ
+                        sinh thái Chuỗi Cung cầu Nông sản Việt</h2>
+                    <p class="section-desc">
+                        Công ty Cổ phần Hệ sinh thái AFDEX (tiền thân là Công ty
+                        TNHH Phố Chợ Cổ) là đơn vị tiên phong
+                        phát triển giải pháp toàn diện nhằm chuyển đổi nền nông
+                        nghiệp Việt Nam theo hướng sinh thái,
+                        bền vững và hiệu quả kinh tế cao. Dự án là kết quả của
+                        hơn 10 năm nghiên cứu, thử nghiệm và
+                        hợp tác với Bộ Nông nghiệp & PTNT, các địa phương, HTX,
+                        trường đại học và đối tác quốc tế.
+                    </p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 class="card-title-sm">Cốt lõi dự án</h3>
+                        <ul class="list">
+                            <li><span class="list-bullet"></span><span>Xây dựng
+                                    nền tảng nông nghiệp số tích hợp đa giá trị,
+                                    gắn với 60 “Chuỗi Cung cầu Nông sản
+                                    Việt”.</span></li>
+                            <li><span class="list-bullet"></span><span>Quy hoạch
+                                    mã sản phẩm, mô hình, Điểm Sàn, chuyên gia,
+                                    giao dịch… để mọi mắt xích đều được mã hóa
+                                    và kết nối.</span></li>
+                            <li><span class="list-bullet"></span><span>Lồng ghép
+                                    AFDEX vào Chương trình Mục tiêu Quốc gia về
+                                    Xây dựng Nông thôn mới, giúp địa phương
+                                    triển khai nhanh mà vẫn có hệ
+                                    thống.</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title-sm">Công nghệ & Cơ sở dữ liệu</h3>
+                        <ul class="list">
+                            <li><span class="list-bullet"></span><span>Sử dụng
+                                    Big Data để mã hóa sản phẩm, đơn hàng, khách
+                                    hàng, chuyên gia, vùng nguyên liệu – nền
+                                    tảng của chuyển đổi số nông
+                                    nghiệp.</span></li>
+                            <li><span class="list-bullet"></span><span>Triển
+                                    khai <strong>Hệ thống thông tin 9
+                                        tầng</strong>, quản lý và truy xuất
+                                    nguồn gốc từ Niên giám toàn quốc đến từng
+                                    Điểm Sàn tại thôn/bản.</span></li>
+                            <li><span class="list-bullet"></span><span>Kế thừa
+                                    Cơ sở dữ liệu <em>“Niên giám Nông nghiệp
+                                        Thực phẩm Việt Nam – 2010”</em>, được Bộ
+                                    NN&PTNT chỉ đạo phát hành và Quỹ Tia sáng
+                                    tài trợ 100.000 USD (2011).</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <!-- VISION & MISSION -->
+            <section id="tam-nhin" data-aos="fade-up" data-aos-duration="900">
+                <div class="section-header">
+                    <span class="section-kicker">Tầm nhìn & Sứ mệnh</span>
+                    <h2 class="section-title">Nền nông nghiệp sinh thái – minh
+                        bạch – hiệu quả kinh tế cao</h2>
+                </div>
+
+                <div class="vision-grid">
+                    <div class="vision-card">
+                        <div class="vision-label">Tầm nhìn</div>
+                        <p>
+                            Kiến tạo một nền tảng nông nghiệp số tích hợp đa giá
+                            trị, kết nối
+                            <strong>60 “Chuỗi Cung cầu Nông sản Việt”</strong>
+                            vươn tầm quốc tế –
+                            nơi sản phẩm, dịch vụ, tri thức và dòng vốn cùng
+                            chảy trong một hệ sinh thái thống nhất.
+                        </p>
+                    </div>
+
+                    <div class="vision-card">
+                        <div class="vision-label">Sứ mệnh</div>
+                        <p>
+                            Cung cấp giải pháp tối ưu cho toàn bộ chuỗi cung ứng
+                            nông sản, đảm bảo tính minh bạch,
+                            an toàn thực phẩm, truy xuất nguồn gốc, đồng thời
+                            nâng cao chất lượng cuộc sống
+                            cho cộng đồng nông dân, HTX, doanh nghiệp Việt Nam.
+                        </p>
+                    </div>
+
+                    <div class="vision-card">
+                        <div class="vision-label">Mục tiêu chiến lược</div>
+                        <p>
+                            Lồng ghép AFDEX vào <strong>Chương trình Mục tiêu
+                                Quốc gia Xây dựng Nông thôn mới</strong> –
+                            giúp địa phương có “bản đồ số” về sản phẩm chủ lực,
+                            Điểm Sàn địa danh, dịch vụ công–tư
+                            và cơ chế hợp tác đầu tư dài hạn.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <!-- HP4 MODEL -->
+            <section id="hp4" data-aos="fade-up" data-aos-duration="900">
+                <div class="section-header">
+                    <span class="section-kicker">Mô hình hoạt động</span>
+                    <h2 class="section-title">Mô hình Nông nghiệp sinh thái đa
+                        giá trị & Cơ chế HP4</h2>
+                    <p class="section-desc">
+                        AFDEX áp dụng mô hình <strong>Multifunctional Ecological
+                            Agriculture</strong> và cơ chế đồng bộ vận hành
+                        <strong>HP4</strong> (High Potential Product – High
+                        Performance Partnerships – High Profit – High Priority).
+                    </p>
+                </div>
+
+                <div class="eco-grid">
+                    <div class="eco-card" data-aos="fade-up"
+                        data-aos-delay="40">
+                        <div class="eco-tag"><span class="eco-dot"></span> HP4 –
+                            High Potential Product</div>
+                        <div class="eco-title">Sản phẩm chủ lực vùng miền</div>
+                        <div class="eco-pill">Lúa gạo, cà phê, hồ tiêu, rau củ
+                            quả…</div>
+                        <p>
+                            Xác định & phát triển các sản phẩm chủ lực, đặc
+                            trưng theo vùng – làm “hạt nhân”
+                            cho mỗi Chuỗi Cung cầu và Chuỗi Giá trị nông sản.
+                        </p>
+                    </div>
+
+                    <div class="eco-card" data-aos="fade-up"
+                        data-aos-delay="80">
+                        <div class="eco-tag"><span class="eco-dot"
+                                style="background:#38bdf8;"></span> HP4 </div>
+                        <div class="eco-title">Mạng lưới đối tác hiệu suất
+                            cao</div>
+                        <div class="eco-pill">Nông dân – HTX – DN – Nhà phân
+                            phối</div>
+                        <p>
+                            Kết nối người sản xuất, HTX, doanh nghiệp chế biến,
+                            logistics, phân phối…
+                            trong một cơ chế hợp tác rõ ràng, dựa trên dữ liệu
+                            và cam kết dài hạn.
+                        </p>
+                    </div>
+
+                    <div class="eco-card" data-aos="fade-up"
+                        data-aos-delay="120">
+                        <div class="eco-tag"><span class="eco-dot"
+                                style="background:#f97316;"></span> HP4 – High
+                            Profit</div>
+                        <div class="eco-title">Tối ưu lợi nhuận cho mọi
+                            bên</div>
+                        <div class="eco-pill">Cắt giảm trung gian </div>
+                        <p>
+                            Tối ưu chi phí, giảm thất thoát, tăng giá trị gia
+                            tăng tại vùng nguyên liệu,
+                            giúp các bên tham gia đều có “phần” rõ ràng trong
+                            Chuỗi Giá trị.
+                        </p>
+                    </div>
+
+                    <div class="eco-card" data-aos="fade-up"
+                        data-aos-delay="160">
+                        <div class="eco-tag"><span class="eco-dot"
+                                style="background:#a855f7;"></span> HP4 – High
+                            Priority</div>
+                        <div class="eco-title">Tuân thủ pháp luật </div>
+                        <div class="eco-pill">Chuẩn Việt Nam & Quốc tế</div>
+                        <p>
+                            Đảm bảo sản phẩm, quy trình sản xuất, chế biến,
+                            thương mại đều tuân thủ
+                            các tiêu chuẩn luật pháp trong nước & quốc tế, phù
+                            hợp xu hướng kinh tế xanh,
+                            tín chỉ carbon và phát triển bền vững.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <!-- 4 COMPONENTS HP1–HP4 -->
+            <section id="he-sinh-thai" data-aos="fade-up"
+                data-aos-duration="900">
+                <div class="section-header">
+                    <span class="section-kicker">04 hợp phần</span>
+                    <h2 class="section-title">Quy hoạch Hệ sinh thái AFDEX theo
+                        4 hợp phần HP1–HP4</h2>
+                    <p class="section-desc">
+                        Để Chủ thể và Chuyên gia tham gia hưởng lợi nhanh chóng,
+                        AFDEX quy hoạch bộ mã sản phẩm, Điểm Sàn,
+                        dịch vụ và giao dịch thành 04 hợp phần: HP1 – Chuỗi
+                        ngành hàng OCOP; HP2 – Mạng lưới Điểm Sàn địa danh;
+                        HP3 – Dịch vụ công–tư; HP4 – Cơ chế đồng bộ vận hành.
+                    </p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 class="card-title-sm">HP1 – Thiết lập các Chuỗi
+                            Ngành hàng OCOP</h3>
+                        <ul class="list">
+                            <li><span class="list-bullet"></span><span>Quy hoạch
+                                    bộ mã sản phẩm OCOP/Mô hình với trên
+                                    <strong>1.000.000 mã sản phẩm tiêu dùng & mô
+                                        hình đầu tư</strong>.</span></li>
+                            <li><span class="list-bullet"></span><span>5 nhóm
+                                    ngành: (CN1) Trồng tỉa chiết ghép, (CN2)
+                                    Chăn nuôi bản địa, (CN3) Thủy sản vùng miền,
+                                    (CN4) Thủ công kỹ nghệ, (CN5) Nam y Nam
+                                    dược.</span></li>
+                            <li><span class="list-bullet"></span><span>Chia
+                                    thành 60 “Chuỗi Cung cầu Nông sản Việt”; mỗi
+                                    chuỗi gồm 21 Chuỗi sản phẩm chủ lực và 7
+                                    phân khúc mục tiêu PK1–PK7 (từ gene giống
+                                    đến thương mại sản phẩm/dịch
+                                    vụ).</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title-sm">HP2 – Mạng lưới Điểm Sàn địa
+                            danh</h3>
+                        <ul class="list">
+                            <li><span class="list-bullet"></span><span>Quy hoạch
+                                    bộ mã Điểm Sàn/Địa danh theo 06 cấp: ĐSC1
+                                    (Hệ Sinh thái AFDEX), ĐSC2 (Điều phối khu
+                                    vực), ĐSC3 (Điều phối dịch vụ tỉnh/thành),
+                                    ĐSC4 (Mô hình huyện/thị), ĐSC5 (Đại lý dịch
+                                    vụ xã/phường), ĐSC6 (Điểm giao thương cơ sở
+                                    thôn/bản/vệ tinh).</span></li>
+                            <li><span class="list-bullet"></span><span>3 Cụm Mô
+                                    hình điều phối (CMH1, CMH2, CMH3) giúp cấp
+                                    tỉnh, khu vực và Hệ sinh thái toàn quốc phối
+                                    hợp nhịp nhàng.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid-2" style="margin-top:1.2rem;">
+                    <div class="card">
+                        <h3 class="card-title-sm">HP3 – Đào tạo khai thác Dịch
+                            vụ Công–tư</h3>
+                        <p style="font-size:.84rem;margin-bottom:.35rem;">Quy
+                            hoạch bộ mã Chuyên gia/Dịch vụ AFDEX theo 06
+                            nhóm:</p>
+                        <ul class="list">
+                            <li><span class="list-bullet"></span><span>(DV1) Tài
+                                    chính, bảo hiểm, tín dụng, ngân
+                                    hàng.</span></li>
+                            <li><span class="list-bullet"></span><span>(DV2) Đào
+                                    tạo thực hành, cung cấp nhân
+                                    lực.</span></li>
+                            <li><span class="list-bullet"></span><span>(DV3)
+                                    Kiểm soát chất lượng, chuyển giao công
+                                    nghệ.</span></li>
+                            <li><span class="list-bullet"></span><span>(DV4)
+                                    Phát triển thị trường, chăm sóc thành
+                                    viên.</span></li>
+                            <li><span class="list-bullet"></span><span>(DV5)
+                                    Quản lý nhu cầu, tập trung nguồn
+                                    lực.</span></li>
+                            <li><span class="list-bullet"></span><span>(DV6)
+                                    Quản trị mô hình, phát triển hệ thống – trên
+                                    nền <strong>9 tầng thông
+                                        tin</strong>.</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title-sm">HP4 – Cơ chế “Đồng bộ vận
+                            hành”</h3>
+                        <ul class="list">
+                            <li><span class="list-bullet"></span><span>Quy hoạch
+                                    bộ mã Giao dịch/Chủ thể/Chuyên gia thông qua
+                                    03 Cụm Mô hình: (CMH1) Nông nghiệp sinh
+                                    thái, (CMH2) Chế biến bảo quản, (CMH3)
+                                    Thương mại dịch vụ.</span></li>
+                            <li><span class="list-bullet"></span><span>04 mảng
+                                    đầu tư: (MĐT1) Bất động sản liên quan,
+                                    (MĐT2) Hạ tầng thiết bị, (MĐT3) Sáng chế bản
+                                    quyền, (MĐT4) Giá trị đồng bộ.</span></li>
+                            <li><span class="list-bullet"></span><span>03 Hệ
+                                    điều phối: (HĐPĐ), (HĐPK), (HĐPTH) cùng 33
+                                    khái niệm & 144 cụm từ khóa – tạo khối đại
+                                    đoàn kết chuyên gia & chủ thể cùng phát
+                                    triển.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <!-- PRODUCT GROUPS -->
+            <section id="san-pham" data-aos="fade-up" data-aos-duration="900">
+                <div class="section-header">
+                    <span class="section-kicker">Ngành hàng chủ lực</span>
+                    <h2 class="section-title">Những nhóm sản phẩm AFDEX ưu tiên
+                        quy hoạch</h2>
+                </div>
+
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-title">Nông sản Thực phẩm</div>
+                        <p>Gạo, cà phê, hồ tiêu, chè, rau củ quả… – các ngành
+                            hàng liên quan trực tiếp đến an ninh lương thực &
+                            xuất khẩu.</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-title">Thủy hải sản</div>
+                        <p>Các sản phẩm nuôi trồng & đánh bắt gắn với Chuỗi Cung
+                            cầu và Điểm Sàn cảng cá, vùng nuôi, nhà máy chế
+                            biến.</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-title">Nam y – Nam dược</div>
+                        <p>Dược liệu, thuốc Nam, sản phẩm chăm sóc sức khỏe dựa
+                            trên tri thức bản địa, truy xuất vùng trồng rõ
+                            ràng.</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-title">Sản phẩm Làng nghề</div>
+                        <p>Thủ công mỹ nghệ, đặc sản vùng miền – nâng tầm chuỗi
+                            giá trị thông qua mã hóa sản phẩm & Chuỗi Cung
+                            cầu.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <!-- PARTNERS & ACHIEVEMENTS -->
+            <section id="doi-tac" data-aos="fade-up" data-aos-duration="900">
+                <div class="section-header">
+                    <span class="section-kicker">Thành tựu & Đối tác chiến
+                        lược</span>
+                    <h2 class="section-title">Hệ sinh thái được xây bằng hợp tác
+                        trong nước & quốc tế</h2>
+                </div>
+
+                <div class="partner-grid">
+                    <div class="partner-card">
+                        <div class="badge-mini">Đối tác trong nước</div>
+                        <div class="partner-title">Liên minh Hợp tác xã Việt Nam
+                            (VCA)</div>
+                        <p>
+                            Ngày 01/4/2021, AFDEX làm việc với lãnh đạo VCA để
+                            xây dựng giải pháp Chuỗi Cung ứng hiệu quả,
+                            mở đường cho hợp tác sâu rộng với mạng lưới HTX toàn
+                            quốc.
+                        </p>
+                        <ul class="list" style="margin-top:.45rem;">
+                            <li><span class="list-bullet"></span><span>Bộ
+                                    NN&PTNT có văn bản đề nghị UBND các tỉnh tạo
+                                    điều kiện lồng ghép AFDEX vào Chương trình
+                                    Nông thôn mới.</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="partner-card">
+                        <div class="badge-mini">Đối tác quốc tế</div>
+                        <div class="partner-title">Noble Network – BWA
+                            Global</div>
+                        <p>
+                            Ngày 24/03/2021, AFDEX EcoSystem và Noble Network ký
+                            kết thỏa thuận hợp tác chiến lược
+                            nhằm xây dựng các giải pháp Chuỗi Cung ứng bền vững
+                            & mở rộng thị trường xuất khẩu.
+                        </p>
+                        <p style="font-size:.8rem;margin-top:.35rem;">
+                            Đồng thời, dự án hợp tác với quỹ <strong>BestB
+                                Capital</strong> và các nhà đầu tư khác để thu
+                            hút nguồn vốn,
+                            tạo cơ hội lớn cho các đối tác tham gia Hệ sinh thái
+                            AFDEX.
+                        </p>
+                    </div>
+
+                    <div class="partner-card">
+                        <div class="badge-mini">Khoa học & tín chỉ carbon</div>
+                        <div class="partner-title">Trường Đại học, Viện nghiên
+                            cứu & Dự án Carbon</div>
+                        <p>
+                            Hợp tác với các trường đại học, viện nghiên cứu để
+                            ứng dụng công nghệ mới vào sản xuất –
+                            từ canh tác sinh thái, chế biến, đến quản lý Chuỗi
+                            Giá trị tín chỉ carbon
+                            (trồng rừng, nông nghiệp các-bon thấp).
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <!-- TIMELINE -->
+            <section id="lo-trinh" data-aos="fade-up" data-aos-duration="900">
+                <div class="section-header">
+                    <span class="section-kicker">Lịch sử & lộ trình triển
+                        khai</span>
+                    <h2 class="section-title">Từ Niên giám 2010 đến Hệ sinh thái
+                        AFDEX 2030+</h2>
+                </div>
+
+                <div class="timeline-wrapper">
+                    <div class="timeline-steps">
+                        <div class="timeline-step">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-year">2010 – 2011</div>
+                            <div class="timeline-label">
+                                Phát hành “Niên giám Nông nghiệp Thực phẩm Việt
+                                Nam – 2010”.
+                                Được công nhận là doanh nghiệp xã hội và nhận
+                                tài trợ 100.000 USD từ Quỹ Tia sáng.
+                            </div>
+                        </div>
+
+                        <div class="timeline-step">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-year">2012 – 2020</div>
+                            <div class="timeline-label">
+                                Hoàn thiện Ý tưởng Hệ Sinh thái AFDEX theo 4 hợp
+                                phần;
+                                nghiên cứu 60 Chuỗi Cung ứng và 6 tầng Điểm Sàn;
+                                xây dựng 9 tầng thông tin.
+                            </div>
+                        </div>
+
+                        <div class="timeline-step">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-year">2021</div>
+                            <div class="timeline-label">
+                                Làm việc với VCA, ký kết cùng Noble Network; Bộ
+                                NN&PTNT đề nghị các tỉnh tạo điều kiện
+                                lồng ghép Đề án AFDEX vào chương trình Nông thôn
+                                mới.
+                            </div>
+                        </div>
+
+                        <div class="timeline-step">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-year">2025 – 2030</div>
+                            <div class="timeline-label">
+                                <strong>Giai đoạn triển khai:</strong>
+                                2025–2026: Pilot 5–10 Chuỗi Cung cầu tại 2–3
+                                tỉnh.
+                                2026–2028: Mở rộng 30+ Chuỗi, tích hợp tín chỉ
+                                carbon & ngân hàng số.
+                                2028–2030+: Hoàn thiện 60 Chuỗi Cung cầu Nông
+                                sản Việt, kết nối thị trường quốc tế.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <!-- FAQ -->
+            <section id="faq" data-aos="fade-up" data-aos-duration="900">
+                <div class="section-header">
+                    <span class="section-kicker">Câu hỏi thường gặp</span>
+                    <h2 class="section-title">Một vài câu hỏi mà đối tác hay đặt
+                        ra</h2>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>AFDEX khác gì so với các sàn TMĐT nông sản
+                                thông thường?</span>
+                            <div class="faq-toggle">+</div>
+                        </div>
+                        <div class="faq-answer">
+                            AFDEX không chỉ là nơi đăng tin mua–bán, mà là hệ
+                            sinh thái đầy đủ: quy hoạch Chuỗi Cung cầu,
+                            Điểm Sàn địa danh, dịch vụ công–tư, cơ chế đầu tư…
+                            Mỗi sản phẩm, mô hình, dịch vụ đều được
+                            mã hóa và gắn vào Chuỗi Giá trị cụ thể, có đối tác,
+                            cơ chế vận hành và dữ liệu đi kèm.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Địa phương muốn lồng ghép AFDEX vào Nông thôn
+                                mới thì bắt đầu từ đâu?</span>
+                            <div class="faq-toggle">+</div>
+                        </div>
+                        <div class="faq-answer">
+                            Thường bắt đầu từ 3 bước: (1) Khảo sát sản phẩm chủ
+                            lực & Chuỗi ngành hàng OCOP (HP1);
+                            (2) Quy hoạch Điểm Sàn địa danh cấp tỉnh/huyện/xã
+                            (HP2); (3) Thử nghiệm một số gói
+                            dịch vụ công–tư (HP3) gắn với mô hình cụ thể, sau đó
+                            mới mở rộng toàn Chuỗi.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Doanh nghiệp, HTX, chuyên gia tham gia Hệ sinh
+                                thái thì được gì?</span>
+                            <div class="faq-toggle">+</div>
+                        </div>
+                        <div class="faq-answer">
+                            Mỗi Chủ thể/Chuyên gia được quy hoạch mã riêng, tham
+                            gia vào Chuỗi Cung cầu phù hợp,
+                            có cơ hội hưởng lợi từ hợp đồng dài hạn, dịch vụ tài
+                            chính, chương trình tín chỉ carbon,
+                            chuyển giao công nghệ, đào tạo nhân lực… trong một
+                            cơ chế minh bạch, công bằng.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <!-- <section id="lien-he" data-aos="fade-up" data-aos-duration="900">
+                <div class="cta">
+                    <h3 style="margin-bottom:.35rem;">Muốn AFDEX “may đo” theo
+                        tỉnh, vùng hoặc tập đoàn của bạn?</h3>
+                    <p>
+                        Trang web này là bản demo giới thiệu dự án. Khi triển
+                        khai thực tế, có thể thay logo, màu sắc,
+                        bản đồ, số liệu, báo cáo và kết nối trực tiếp với dữ
+                        liệu của địa phương/đối tác.
+                    </p>
+                    <div class="hero-actions"
+                        style="justify-content:center;margin-top:.8rem;">
+                        <a href="#top" class="btn-primary">Cuộn lên đầu & xem
+                            lại tổng quan</a>
+                        <button class="btn-ghost"
+                            onclick="alert('Ở bản triển khai thật: mở form đăng ký, đặt lịch họp, hoặc kết nối ngay với đội dự án AFDEX.')">
+                            Ví dụ nút “Đặt lịch làm việc”
+                        </button>
+                    </div>
+                </div>
+            </section> -->
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-inner">
+                <div>
+                    <div class="footer-brand-title">Công ty Cổ phần Hệ sinh thái
+                        AFDEX</div>
+                    <p class="footer-brand-desc">
+                        Tiên phong xây dựng Hệ sinh thái Chuỗi Cung cầu Nông sản
+                        Việt, dựa trên
+                        Niên giám Nông nghiệp Thực phẩm 2010 và hơn 10 năm
+                        nghiên cứu, hợp tác trong – ngoài nước.
+                    </p>
+                </div>
+
+                <div class="footer-cols">
+                    <div>
+                        <div class="footer-col-title">Dự án AFDEX</div>
+                        <ul class="footer-list">
+                            <li><span>Giới thiệu & lịch sử hình
+                                    thành</span></li>
+                            <li><span>Mô hình HP4 & 4 hợp phần</span></li>
+                            <li><span>Chuỗi Cung cầu & Điểm Sàn</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="footer-col-title">Liên hệ</div>
+                        <ul class="footer-list">
+                            <li><span>Email: info@afdex.vn (ví dụ)</span></li>
+                            <li><span>Điện thoại: (+84) xxx xxx xxx</span></li>
+                            <li><span>Địa chỉ: Bổ sung theo thông tin chính
+                                    thức</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="footer-col-title">Tài liệu</div>
+                        <ul class="footer-list">
+                            <li><a class="footer-link">Thuyết minh dự
+                                    án</a></li>
+                            <li><a class="footer-link">Slide trình bày</a></li>
+                            <li><a class="footer-link">Tài liệu kỹ thuật & cơ sở
+                                    dữ liệu</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="footer-col-title">Kết nối</div>
+                        <ul class="footer-list">
+                            <li><a class="footer-link">Website chính
+                                    thức</a></li>
+                            <li><a class="footer-link">Fanpage / Zalo
+                                    OA</a></li>
+                            <li><a class="footer-link">Kênh YouTube /
+                                    Livestream</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>© 2025 · AFDEX EcoSystem</div>
+                <div class="footer-badges-row">
+                    <div class="footer-chip">Chuỗi Cung cầu Nông sản Việt</div>
+                    <div class="footer-chip">Nông nghiệp sinh thái đa giá
+                        trị</div>
+                    <div class="footer-chip">Chuyển đổi số & tín chỉ
+                        carbon</div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <script>
+    AOS.init({ once: true, offset: 80 });
+
+    window.addEventListener('load', () => {
+      document.body.classList.add('is-loaded');
+    });
+
+    // Smooth scroll cho anchor
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // FAQ toggle
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const q = item.querySelector('.faq-question');
+      q.addEventListener('click', () => {
+        item.classList.toggle('active');
+        const toggle = item.querySelector('.faq-toggle');
+        toggle.textContent = item.classList.contains('active') ? '−' : '+';
+      });
+    });
+
+    // Scroll progress + header state
+    const progressEl = document.getElementById('scrollProgress');
+    const headerEl   = document.getElementById('siteHeader');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const ratio = docHeight > 0 ? scrollTop / docHeight : 0;
+      progressEl.style.transform = `scaleX(${ratio})`;
+
+      if (scrollTop > 16) headerEl.classList.add('header-scrolled');
+      else headerEl.classList.remove('header-scrolled');
+    });
+      function openNotice() {
+    const modal = document.getElementById('project-notice');
+    modal.classList.add('show');
+    // khóa scroll nền
+    document.body.style.overflow = 'hidden';
+  }
+      function openNotice() {
+    const modal = document.getElementById('project-notice');
+    modal.classList.add('show');
+    // khóa scroll nền
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeNotice() {
+    const modal = document.getElementById('project-notice');
+    modal.classList.remove('show');
+    // mở lại scroll nền
+    document.body.style.overflow = '';
+  }
+
+  // Click ra ngoài card thì đóng
+  function overlayClick(event) {
+    if (event.target.id === 'project-notice') {
+      closeNotice();
+    }
+  }
+
+  // Bấm ESC để đóng
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      closeNotice();
+    }
+  });
+  </script>
+    </body>
+</html>
