@@ -4,15 +4,20 @@
     <meta charset="UTF-8" />
     <title>AFDEX – Hệ sinh thái Chuỗi Cung cầu Nông sản Việt</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-e96f82e3-a9d6-49d3-b5c1-cad361382f0d" data-elfsight-app-lazy></div>
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div
+      class="elfsight-app-e96f82e3-a9d6-49d3-b5c1-cad361382f0d"
+      data-elfsight-app-lazy
+    ></div>
     <!-- Font & AOS -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+      href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    />
 
     <style>
       :root {
@@ -82,9 +87,8 @@
           color: #bbf7d0;
         }
 
-        /* ✅ THÊM DÒNG NÀY */
         .nav-links-mobile .nav-cta-mobile {
-          display: flex; /* ← bắt buộc thêm */
+          display: flex;
           margin-top: 8px;
           width: 100%;
           justify-content: center;
@@ -436,197 +440,127 @@
         transform: rotate3d(1, -1, 0, 16deg) translateY(-4px) scale(1.02);
         transition: transform 0.35s ease-out;
       }
-/* ===== COUNTDOWN CARD – Ở GIỮA HERO RIGHT ===== */
-.hero-countdown-card {
-  position: absolute;
-  bottom: -48px;              /* hơi tràn xuống dưới card cho đẹp, thích thì sửa 0 / 4px */
-  left: 0;
-  right: 0;
-  margin: 0 auto;            /* ✅ chìa khóa: auto 2 bên để luôn vào giữa */
-  transform: translate3d(0, 0, 50px);
-  z-index: 5;
 
-  padding: 10px 14px;
-  border-radius: 18px;
-  background:
-    radial-gradient(circle at 0 0, rgba(34, 197, 94, 0.35), transparent 60%),
-    radial-gradient(circle at 100% 100%, rgba(56, 189, 248, 0.25), transparent 60%),
-    rgba(15, 23, 42, 0.96);
-  border: 1px solid rgba(190, 242, 100, 0.9);
-  box-shadow:
-    0 18px 40px rgba(0, 0, 0, 0.9),
-    0 0 0 1px rgba(15, 23, 42, 0.9);
+      /* ===== COUNTDOWN CARD – Ở GIỮA HERO RIGHT ===== */
+      .hero-countdown-card {
+        position: absolute;
+        bottom: -48px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        transform: translate3d(0, 0, 50px);
+        z-index: 5;
 
-  font-size: 0.78rem;
-  color: #e5e7eb;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+        padding: 10px 14px;
+        border-radius: 18px;
+        background:
+          radial-gradient(circle at 0 0, rgba(34, 197, 94, 0.35), transparent 60%),
+          radial-gradient(circle at 100% 100%, rgba(56, 189, 248, 0.25), transparent 60%),
+          rgba(15, 23, 42, 0.96);
+        border: 1px solid rgba(190, 242, 100, 0.9);
+        box-shadow:
+          0 18px 40px rgba(0, 0, 0, 0.9),
+          0 0 0 1px rgba(15, 23, 42, 0.9);
 
-  animation: heroCountdownFloat 4s ease-in-out infinite alternate;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-}
+        font-size: 0.78rem;
+        color: #e5e7eb;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
 
-.hero-countdown-header {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.78rem;
-}
+        animation: heroCountdownFloat 4s ease-in-out infinite alternate;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+      }
 
-.hero-countdown-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: #22c55e;
-  box-shadow: 0 0 12px rgba(34, 197, 94, 1);
-}
+      .hero-countdown-header {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
 
-.hero-countdown-title {
-  font-weight: 600;
-}
+      .hero-countdown-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 3px 9px;
+        border-radius: 999px;
+        border: 1px solid rgba(190, 242, 100, 0.9);
+        background: rgba(3, 7, 18, 0.9);
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #bbf7d0;
+      }
 
-.hero-countdown-sub {
-  font-size: 0.7rem;
-  color: #e5defa;
-  opacity: 0.9;
-}
+      .hero-countdown-badge-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: #22c55e;
+        box-shadow: 0 0 12px rgba(34, 197, 94, 1);
+      }
 
-.hero-countdown-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 6px;
-  margin-top: 4px;
-}
+      .hero-countdown-subtitle {
+        font-size: 0.72rem;
+        color: #9ca3af;
+      }
 
-.hero-countdown-item {
-  border-radius: 10px;
-  padding: 6px 4px;
-  background: rgba(15, 23, 42, 0.98);
-  border: 1px solid rgba(148, 163, 184, 0.7);
-  text-align: center;
-}
+      .hero-countdown-row {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 6px;
+      }
 
-.hero-countdown-value {
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-}
+      .hero-countdown-pill {
+        border-radius: 999px;
+        padding: 6px 4px;
+        background:
+          radial-gradient(circle at 0 0, rgba(34, 197, 94, 0.25), transparent 70%),
+          rgba(15, 23, 42, 0.96);
+        border: 1px solid rgba(148, 163, 184, 0.7);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.75);
+      }
 
-.hero-countdown-label {
-  font-size: 0.65rem;
-  color: #9ca3af;
-}
+      .hero-countdown-number {
+        font-size: 0.98rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        color: #bbf7d0;
+      }
 
-@keyframes heroCountdownFloat {
-  0% {
-    transform: translate3d(0, 0, 50px);
-  }
-  100% {
-    transform: translate3d(0, -4px, 50px);
-  }
-}
+      .hero-countdown-label {
+        font-size: 0.66rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: #9ca3af;
+      }
 
-/* Mobile: nếu muốn nhỏ lại một chút */
-@media (max-width: 600px) {
-  .hero-countdown-card {
-    padding: 10px 10px;
-    bottom: -18px;
-  }
-  .hero-countdown-value {
-    font-size: 0.82rem;
-  }
-  .hero-countdown-label {
-    font-size: 0.62rem;
-  }
-}
+      @keyframes heroCountdownFloat {
+        0% {
+          transform: translate3d(0, 0, 50px);
+        }
+        100% {
+          transform: translate3d(0, -6px, 50px);
+        }
+      }
 
-
-.hero-countdown-header {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.hero-countdown-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 3px 9px;
-  border-radius: 999px;
-  border: 1px solid rgba(190, 242, 100, 0.9);
-  background: rgba(3, 7, 18, 0.9);
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #bbf7d0;
-}
-
-.hero-countdown-badge-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: #22c55e;
-  box-shadow: 0 0 12px rgba(34, 197, 94, 1);
-}
-
-.hero-countdown-subtitle {
-  font-size: 0.72rem;
-  color: #9ca3af;
-}
-
-.hero-countdown-row {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 6px;
-}
-
-.hero-countdown-pill {
-  border-radius: 999px;
-  padding: 6px 4px;
-  background: radial-gradient(circle at 0 0, rgba(34, 197, 94, 0.25), transparent 70%),
-    rgba(15, 23, 42, 0.96);
-  border: 1px solid rgba(148, 163, 184, 0.7);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.75);
-}
-
-.hero-countdown-number {
-  font-size: 0.98rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: #bbf7d0;
-}
-
-.hero-countdown-label {
-  font-size: 0.66rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #9ca3af;
-}
-
-/* Animation lắc nhẹ */
-@keyframes heroCountdownFloat {
-  0% {
-    transform: translate3d(0, 0, 50px);
-  }
-  100% {
-    transform: translate3d(0, -6px, 50px);
-  }
-}
-
-/* Responsive: đưa countdown xuống giữa cho mobile */
-
-@media (max-width: 768px) {
-
-
-}
-
- 
+      @media (max-width: 600px) {
+        .hero-countdown-card {
+          padding: 10px 10px;
+          bottom: -18px;
+        }
+        .hero-countdown-number {
+          font-size: 0.82rem;
+        }
+        .hero-countdown-label {
+          font-size: 0.62rem;
+        }
+      }
 
       .hero-countdown-line {
         display: inline-flex;
@@ -640,11 +574,6 @@
         border-radius: 999px;
         background: #22c55e;
         box-shadow: 0 0 12px rgba(34, 197, 94, 1);
-      }
-
-      .hero-countdown-label {
-        font-weight: 600;
-        font-size: 0.78rem;
       }
 
       .hero-countdown-time {
@@ -666,9 +595,6 @@
           transform: translate3d(0, -6px, 40px);
         }
       }
-
-      /* responsive hero-countdown */
-      
 
       /* ===== ANIMATIONS ===== */
 
@@ -1005,6 +931,49 @@
         border-color: var(--primary);
         box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.38);
         transform: translateY(-1px);
+      }
+
+      /* Lang switch */
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .lang-switch {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 0.78rem;
+        padding: 2px 6px;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.5);
+        background: rgba(15, 23, 42, 0.9);
+      }
+
+      .lang-label {
+        color: var(--text-muted);
+      }
+
+      .lang-btn {
+        border: none;
+        background: transparent;
+        color: var(--text-muted);
+        font-size: 0.78rem;
+        padding: 2px 6px;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: all 0.18s;
+      }
+
+      .lang-btn:hover {
+        color: #e5e7eb;
+      }
+
+      .lang-btn.lang-active {
+        background: linear-gradient(120deg, #bef264, #22c55e);
+        color: #052e16;
+        font-weight: 600;
       }
 
       /* Nút hamburger mobile */
@@ -1713,29 +1682,40 @@
           </div>
           <div class="brand-text">
             <strong>AFDEX</strong>
-            <span>Chuỗi Cung cầu Nông sản Việt</span>
+            <span data-i18n="brand.tagline">Chuỗi Cung cầu Nông sản Việt</span>
           </div>
         </div>
 
         <div class="nav-links">
-          <a href="#tong-quan">Giới thiệu</a>
-          <a href="#tam-nhin">Tầm nhìn</a>
-          <a href="#hp4">Mô hình HP4</a>
-          <a href="#doi-tac">Đối tác</a>
-          <a href="#san-pham">Ngành hàng</a>
-          <a href="#lo-trinh">Mốc thời gian</a>
-          <a href="#faq">FAQ</a>
+          <a href="#tong-quan" data-i18n="nav.intro">Giới thiệu</a>
+          <a href="#tam-nhin" data-i18n="nav.vision">Tầm nhìn</a>
+          <a href="#hp4" data-i18n="nav.hp4">Mô hình HP4</a>
+          <a href="#doi-tac" data-i18n="nav.partners">Đối tác</a>
+          <a href="#san-pham" data-i18n="nav.products">Ngành hàng</a>
+          <a href="#lo-trinh" data-i18n="nav.timeline">Mốc thời gian</a>
+          <a href="#faq" data-i18n="nav.faq">FAQ</a>
         </div>
 
-        <!-- CTA desktop -->
-        <button class="nav-cta" onclick="openNotice()">
-          Vào Website của chúng tôi →</button>
+        <div class="nav-right">
+          <!-- Nút đổi ngôn ngữ -->
+          <div class="lang-switch">
+            <span class="lang-label">Lang:</span>
+            <button class="lang-btn lang-active" data-lang="vi">VI</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+          </div>
+
+          <!-- CTA desktop -->
+          <button class="nav-cta" onclick="openNotice()" data-i18n="nav.cta">
+            Vào Website của chúng tôi →
+          </button>
+        </div>
 
         <!-- Nút hamburger mobile -->
         <button
           class="nav-toggle"
           id="navToggle"
-          aria-label="Mở menu điều hướng">
+          aria-label="Mở menu điều hướng"
+        >
           <span></span>
           <span></span>
           <span></span>
@@ -1744,16 +1724,18 @@
 
       <!-- Menu mobile dropdown -->
       <div class="nav-links-mobile" id="navMobile">
-        <a href="#tong-quan">Giới thiệu</a>
-        <a href="#tam-nhin">Tầm nhìn</a>
-        <a href="#hp4">Mô hình HP4</a>
-        <a href="#doi-tac">Đối tác</a>
-        <a href="#san-pham">Ngành hàng</a>
-        <a href="#lo-trinh">Mốc thời gian</a>
-        <a href="#faq">FAQ</a>
+        <a href="#tong-quan" data-i18n="nav.intro">Giới thiệu</a>
+        <a href="#tam-nhin" data-i18n="nav.vision">Tầm nhìn</a>
+        <a href="#hp4" data-i18n="nav.hp4">Mô hình HP4</a>
+        <a href="#doi-tac" data-i18n="nav.partners">Đối tác</a>
+        <a href="#san-pham" data-i18n="nav.products">Ngành hàng</a>
+        <a href="#lo-trinh" data-i18n="nav.timeline">Mốc thời gian</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
         <button
           class="nav-cta nav-cta-mobile"
-          onclick="openNotice(); closeMobileNav();">
+          onclick="openNotice(); closeMobileNav();"
+          data-i18n="nav.cta"
+        >
           Vào Website của chúng tôi →
         </button>
       </div>
@@ -1765,63 +1747,74 @@
         class="hero"
         id="top"
         data-aos="fade-up"
-        data-aos-duration="900">
+        data-aos-duration="900"
+      >
         <div class="hero-left">
-          <div class="badge-hero">
+          <div class="badge-hero" data-i18n="hero.badge">
             <span class="badge-dot"></span>
             Công ty Cổ phần Hệ sinh thái AFDEX
             <span class="badge-tag">Phố Chợ</span>
           </div>
 
-          <h1 class="hero-title">
+          <h1 class="hero-title" data-i18n="hero.title">
             Số hóa dòng chảy <span>nông sản & sinh thái</span> trên cùng một nền
             tảng.
           </h1>
 
-          <p class="hero-sub">
+          <p class="hero-sub" data-i18n="hero.sub">
             AFDEX là hệ sinh thái điều phối 60 “Chuỗi Cung cầu Nông sản Việt”,
             dựa trên hơn 10 năm nghiên cứu và xây dựng cơ sở dữ liệu nông
-            nghiệp – từ <strong>Niên giám Nông nghiệp Thực phẩm Việt Nam
-              2010</strong> đến nền tảng nông nghiệp số tích hợp đa giá trị ngày
-            nay.
+            nghiệp – từ
+            <strong>Niên giám Nông nghiệp Thực phẩm Việt Nam 2010</strong>
+            đến nền tảng nông nghiệp số tích hợp đa giá trị ngày nay.
           </p>
 
           <div class="hero-tags">
-            <div class="hero-tag">
+            <div class="hero-tag" data-i18n="hero.tag1">
               Nông nghiệp sinh thái đa giá trị (MEA)
             </div>
-            <div class="hero-tag">
+            <div class="hero-tag" data-i18n="hero.tag2">
               Cơ chế HP4 – High Potential / Partnership / Profit / Priority
             </div>
-            <div class="hero-tag">Lồng ghép Chương trình Nông thôn mới</div>
+            <div class="hero-tag" data-i18n="hero.tag3">
+              Lồng ghép Chương trình Nông thôn mới
+            </div>
           </div>
 
           <div class="hero-metrics">
             <div class="metric">
               <strong>60</strong>
-              <span>Chuỗi Cung cầu Nông sản Việt được quy hoạch.</span>
+              <span data-i18n="hero.metric1">
+                Chuỗi Cung cầu Nông sản Việt được quy hoạch.
+              </span>
             </div>
             <div class="metric">
               <strong>9 tầng</strong>
-              <span>Hệ thống thông tin quản trị, truy xuất đến tận Điểm Sàn
-                cơ sở.</span>
+              <span data-i18n="hero.metric2">
+                Hệ thống thông tin quản trị, truy xuất đến tận Điểm Sàn cơ sở.
+              </span>
             </div>
             <div class="metric">
               <strong>10+ năm</strong>
-              <span>Nghiên cứu, thử nghiệm & hợp tác cùng Bộ/Ngành, HTX, trường
-                ĐH.</span>
+              <span data-i18n="hero.metric3">
+                Nghiên cứu, thử nghiệm & hợp tác cùng Bộ/Ngành, HTX, trường ĐH.
+              </span>
             </div>
           </div>
 
           <div class="hero-actions">
             <button
               class="btn-primary"
-              onclick="document.getElementById('tam-nhin').scrollIntoView({behavior:'smooth'})">
+              onclick="document.getElementById('tam-nhin').scrollIntoView({behavior:'smooth'})"
+              data-i18n="hero.btnPrimary"
+            >
               Xem Tầm nhìn & Sứ mệnh 🌱
             </button>
             <button
               class="btn-ghost"
-              onclick="document.getElementById('hp4').scrollIntoView({behavior:'smooth'})">
+              onclick="document.getElementById('hp4').scrollIntoView({behavior:'smooth'})"
+              data-i18n="hero.btnSecondary"
+            >
               Khám phá mô hình HP4 & 4 hợp phần
             </button>
           </div>
@@ -1838,7 +1831,8 @@
               <img
                 src="https://images.pexels.com/photos/2255801/pexels-photo-2255801.jpeg"
                 alt="AFDEX - Nền tảng nông nghiệp số"
-                class="af-hero-main-photo" />
+                class="af-hero-main-photo"
+              />
 
               <!-- lớp gradient phủ lên ảnh -->
               <div class="af-hero-main-overlay"></div>
@@ -1846,25 +1840,32 @@
               <!-- chip trên cùng -->
               <div class="af-hero-chip-top">
                 <span class="dot"></span>
-                AFDEX • Hệ sinh thái nông nghiệp số
+                <span data-i18n="hero.chipTop">
+                  AFDEX • Hệ sinh thái nông nghiệp số
+                </span>
               </div>
 
               <!-- strip text nhỏ dưới cùng -->
-              <div class="af-hero-chip-bottom">
+              <div class="af-hero-chip-bottom" data-i18n="hero.chipBottom">
                 Số hoá dòng chảy nông sản &amp; tài chính từ vùng nguyên liệu
                 đến thị trường.
               </div>
             </div>
 
-            <!-- ✅ Thẻ countdown nổi ngoài hero -->
-            <!-- ✅ Thẻ countdown nổi ngoài hero – phiên bản mới -->
+            <!-- Thẻ countdown -->
             <div class="hero-countdown-card">
               <div class="hero-countdown-header">
-                <span class="hero-countdown-badge">
+                <span
+                  class="hero-countdown-badge"
+                  data-i18n="countdown.badge"
+                >
                   <span class="hero-countdown-badge-dot"></span>
                   Đếm ngược đến ngày 09 tháng sau
                 </span>
-                <span class="hero-countdown-subtitle">
+                <span
+                  class="hero-countdown-subtitle"
+                  data-i18n="countdown.subtitle"
+                >
                   Mốc triển khai & mở rộng Hệ sinh thái AFDEX
                 </span>
               </div>
@@ -1872,23 +1873,42 @@
               <div class="hero-countdown-row">
                 <div class="hero-countdown-pill">
                   <span class="hero-countdown-number" id="cd-days">00</span>
-                  <span class="hero-countdown-label">Ngày</span>
+                  <span
+                    class="hero-countdown-label"
+                    data-i18n="countdown.dayLabel"
+                  >
+                    Ngày
+                  </span>
                 </div>
                 <div class="hero-countdown-pill">
                   <span class="hero-countdown-number" id="cd-hours">00</span>
-                  <span class="hero-countdown-label">Giờ</span>
+                  <span
+                    class="hero-countdown-label"
+                    data-i18n="countdown.hourLabel"
+                  >
+                    Giờ
+                  </span>
                 </div>
                 <div class="hero-countdown-pill">
                   <span class="hero-countdown-number" id="cd-mins">00</span>
-                  <span class="hero-countdown-label">Phút</span>
+                  <span
+                    class="hero-countdown-label"
+                    data-i18n="countdown.minuteLabel"
+                  >
+                    Phút
+                  </span>
                 </div>
                 <div class="hero-countdown-pill">
                   <span class="hero-countdown-number" id="cd-secs">00</span>
-                  <span class="hero-countdown-label">Giây</span>
+                  <span
+                    class="hero-countdown-label"
+                    data-i18n="countdown.secondLabel"
+                  >
+                    Giây
+                  </span>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -1897,12 +1917,14 @@
       <div
         id="project-notice"
         class="notice-modal"
-        onclick="overlayClick(event)">
+        onclick="overlayClick(event)"
+      >
         <div class="notice-card">
           <button
             class="notice-close"
             onclick="closeNotice()"
-            aria-label="Đóng thông báo">
+            aria-label="Đóng thông báo"
+          >
             &times;
           </button>
 
@@ -1910,32 +1932,47 @@
             <span>🚀</span>
           </div>
 
-          <div class="notice-title">Dự án đang triển khai đúng lộ trình</div>
+          <div class="notice-title" data-i18n="modal.title">
+            Dự án đang triển khai đúng lộ trình
+          </div>
 
-          <div class="notice-text">
+          <div class="notice-text" data-i18n="modal.text">
             Phần mềm hiện đang được đội ngũ phát triển
             <span class="notice-highlight">triển khai theo đúng kế hoạch</span>.
-            Mọi hạng mục kỹ thuật và trải nghiệm người dùng đang được hoàn thiện
-            từng bước.
+            Mọi hạng mục kỹ thuật và trải nghiệm người dùng đang được hoàn
+            thiện từng bước.
           </div>
 
           <div class="notice-timeline">
-            <div class="notice-badge">
+            <div class="notice-badge" data-i18n="modal.badge">
               <span class="notice-dot"></span>
               Đang trong giai đoạn hoàn thiện &amp; thử nghiệm nội bộ
             </div>
             <div class="notice-eta">
-              Dự kiến hoàn tất: <span>tháng 12/2025</span><br />
+              <span data-i18n="modal.etaLabel">Dự kiến hoàn tất:</span>
+              <span>tháng 12/2025</span><br />
               <small class="notice-countdown">
-                Còn lại: <span id="eta-countdown">...</span>
+                <span data-i18n="modal.remaining">Còn lại:</span>
+                <span id="eta-countdown">...</span>
               </small>
             </div>
           </div>
 
           <div class="notice-footer">
-            <button class="notice-later" onclick="closeNotice()">Để sau</button>
-            <button class="notice-ok" onclick="closeNotice()">Tôi đã
-              hiểu</button>
+            <button
+              class="notice-later"
+              onclick="closeNotice()"
+              data-i18n="modal.btnLater"
+            >
+              Để sau
+            </button>
+            <button
+              class="notice-ok"
+              onclick="closeNotice()"
+              data-i18n="modal.btnOk"
+            >
+              Tôi đã hiểu
+            </button>
           </div>
         </div>
       </div>
@@ -1945,65 +1982,85 @@
       <!-- INTRO -->
       <section id="tong-quan" data-aos="fade-up" data-aos-duration="900">
         <div class="section-header">
-          <span class="section-kicker">Giới thiệu dự án</span>
-          <h2 class="section-title">
+          <span class="section-kicker" data-i18n="intro.kicker">
+            Giới thiệu dự án
+          </span>
+          <h2 class="section-title" data-i18n="intro.title">
             AFDEX – Từ “Phố Chợ Cổ” đến Hệ sinh thái Chuỗi Cung cầu Nông sản
             Việt
           </h2>
-          <p class="section-desc">
+          <p class="section-desc" data-i18n="intro.desc">
             Công ty Cổ phần Hệ sinh thái AFDEX (tiền thân là Công ty TNHH Phố
             Chợ Cổ) là đơn vị tiên phong phát triển giải pháp toàn diện nhằm
             chuyển đổi nền nông nghiệp Việt Nam theo hướng sinh thái, bền vững
             và hiệu quả kinh tế cao. Dự án là kết quả của hơn 10 năm nghiên
-            cứu, thử nghiệm và hợp tác với Bộ Nông nghiệp & PTNT, các địa
+            cứu, thử nghiệm và hợp tác với Bộ Nông nghiệp &amp; PTNT, các địa
             phương, HTX, trường đại học và đối tác quốc tế.
           </p>
         </div>
 
         <div class="grid-2">
           <div class="card">
-            <h3 class="card-title-sm">Cốt lõi dự án</h3>
+            <h3 class="card-title-sm" data-i18n="intro.core.title">
+              Cốt lõi dự án
+            </h3>
             <ul class="list">
               <li>
-                <span class="list-bullet"></span><span>Xây dựng nền tảng nông
-                  nghiệp số tích hợp đa giá trị, gắn với
-                  60 “Chuỗi Cung cầu Nông sản Việt”.</span>
+                <span class="list-bullet"></span>
+                <span data-i18n="intro.core.li1">
+                  Xây dựng nền tảng nông nghiệp số tích hợp đa giá trị, gắn với
+                  60 “Chuỗi Cung cầu Nông sản Việt”.
+                </span>
               </li>
               <li>
-                <span class="list-bullet"></span><span>Quy hoạch mã sản phẩm, mô
-                  hình, Điểm Sàn, chuyên gia, giao
-                  dịch… để mọi mắt xích đều được mã hóa và kết
-                  nối.</span>
+                <span class="list-bullet"></span>
+                <span data-i18n="intro.core.li2">
+                  Quy hoạch mã sản phẩm, mô hình, Điểm Sàn, chuyên gia, giao
+                  dịch… để mọi mắt xích đều được mã hóa và kết nối.
+                </span>
               </li>
               <li>
-                <span class="list-bullet"></span><span>Lồng ghép AFDEX vào
-                  Chương trình Mục tiêu Quốc gia về Xây
+                <span class="list-bullet"></span>
+                <span data-i18n="intro.core.li3">
+                  Lồng ghép AFDEX vào Chương trình Mục tiêu Quốc gia về Xây
                   dựng Nông thôn mới, giúp địa phương triển khai nhanh mà vẫn có
-                  hệ thống.</span>
+                  hệ thống.
+                </span>
               </li>
             </ul>
           </div>
 
           <div class="card">
-            <h3 class="card-title-sm">Công nghệ & Cơ sở dữ liệu</h3>
+            <h3 class="card-title-sm" data-i18n="intro.tech.title">
+              Công nghệ &amp; Cơ sở dữ liệu
+            </h3>
             <ul class="list">
               <li>
-                <span class="list-bullet"></span><span>Sử dụng Big Data để mã
-                  hóa sản phẩm, đơn hàng, khách hàng,
+                <span class="list-bullet"></span>
+                <span data-i18n="intro.tech.li1">
+                  Sử dụng Big Data để mã hóa sản phẩm, đơn hàng, khách hàng,
                   chuyên gia, vùng nguyên liệu – nền tảng của chuyển đổi số nông
-                  nghiệp.</span>
+                  nghiệp.
+                </span>
               </li>
               <li>
-                <span class="list-bullet"></span><span>Triển khai <strong>Hệ
-                    thống thông tin 9 tầng</strong>, quản
+                <span class="list-bullet"></span>
+                <span data-i18n="intro.tech.li2">
+                  Triển khai <strong>Hệ thống thông tin 9 tầng</strong>, quản
                   lý và truy xuất nguồn gốc từ Niên giám toàn quốc đến từng
-                  Điểm Sàn tại thôn/bản.</span>
+                  Điểm Sàn tại thôn/bản.
+                </span>
               </li>
               <li>
-                <span class="list-bullet"></span><span>Kế thừa Cơ sở dữ liệu
-                  <em>“Niên giám Nông nghiệp Thực phẩm Việt Nam – 2010”</em>,
-                  được Bộ NN&PTNT chỉ đạo phát hành và Quỹ Tia sáng tài trợ
-                  100.000 USD (2011).</span>
+                <span class="list-bullet"></span>
+                <span data-i18n="intro.tech.li3">
+                  Kế thừa Cơ sở dữ liệu
+                  <em>
+                    “Niên giám Nông nghiệp Thực phẩm Việt Nam – 2010”
+                  </em>
+                  , được Bộ NN&amp;PTNT chỉ đạo phát hành và Quỹ Tia sáng tài
+                  trợ 100.000 USD (2011).
+                </span>
               </li>
             </ul>
           </div>
@@ -2015,16 +2072,20 @@
       <!-- VISION & MISSION -->
       <section id="tam-nhin" data-aos="fade-up" data-aos-duration="900">
         <div class="section-header">
-          <span class="section-kicker">Tầm nhìn & Sứ mệnh</span>
-          <h2 class="section-title">
+          <span class="section-kicker" data-i18n="vision.kicker">
+            Tầm nhìn &amp; Sứ mệnh
+          </span>
+          <h2 class="section-title" data-i18n="vision.title">
             Nền nông nghiệp sinh thái – minh bạch – hiệu quả kinh tế cao
           </h2>
         </div>
 
         <div class="vision-grid">
           <div class="vision-card">
-            <div class="vision-label">Tầm nhìn</div>
-            <p>
+            <div class="vision-label" data-i18n="vision.card1.label">
+              Tầm nhìn
+            </div>
+            <p data-i18n="vision.card1.text">
               Kiến tạo một nền tảng nông nghiệp số tích hợp đa giá trị, kết nối
               <strong>60 “Chuỗi Cung cầu Nông sản Việt”</strong> vươn tầm quốc
               tế – nơi sản phẩm, dịch vụ, tri thức và dòng vốn cùng chảy trong
@@ -2033,8 +2094,10 @@
           </div>
 
           <div class="vision-card">
-            <div class="vision-label">Sứ mệnh</div>
-            <p>
+            <div class="vision-label" data-i18n="vision.card2.label">
+              Sứ mệnh
+            </div>
+            <p data-i18n="vision.card2.text">
               Cung cấp giải pháp tối ưu cho toàn bộ chuỗi cung ứng nông sản,
               đảm bảo tính minh bạch, an toàn thực phẩm, truy xuất nguồn gốc,
               đồng thời nâng cao chất lượng cuộc sống cho cộng đồng nông dân,
@@ -2043,11 +2106,14 @@
           </div>
 
           <div class="vision-card">
-            <div class="vision-label">Mục tiêu chiến lược</div>
-            <p>
+            <div class="vision-label" data-i18n="vision.card3.label">
+              Mục tiêu chiến lược
+            </div>
+            <p data-i18n="vision.card3.text">
               Lồng ghép AFDEX vào
-              <strong>Chương trình Mục tiêu Quốc gia Xây dựng Nông thôn
-                mới</strong>
+              <strong>
+                Chương trình Mục tiêu Quốc gia Xây dựng Nông thôn mới
+              </strong>
               – giúp địa phương có “bản đồ số” về sản phẩm chủ lực, Điểm Sàn
               địa danh, dịch vụ công–tư và cơ chế hợp tác đầu tư dài hạn.
             </p>
@@ -2060,68 +2126,107 @@
       <!-- HP4 MODEL -->
       <section id="hp4" data-aos="fade-up" data-aos-duration="900">
         <div class="section-header">
-          <span class="section-kicker">Mô hình hoạt động</span>
-          <h2 class="section-title">
-            Mô hình Nông nghiệp sinh thái đa giá trị & Cơ chế HP4
+          <span class="section-kicker" data-i18n="hp4.kicker">
+            Mô hình hoạt động
+          </span>
+          <h2 class="section-title" data-i18n="hp4.title">
+            Mô hình Nông nghiệp sinh thái đa giá trị &amp; Cơ chế HP4
           </h2>
-          <p class="section-desc">
+          <p class="section-desc" data-i18n="hp4.desc">
             AFDEX áp dụng mô hình
-            <strong>Multifunctional Ecological Agriculture</strong> và cơ chế
-            đồng bộ vận hành <strong>HP4</strong> (High Potential Product –
-            High Performance Partnerships – High Profit – High Priority).
+            <strong>Multifunctional Ecological Agriculture</strong>
+            và cơ chế đồng bộ vận hành
+            <strong>HP4</strong>
+            (High Potential Product – High Performance Partnerships – High Profit
+            – High Priority).
           </p>
         </div>
 
         <div class="eco-grid">
-          <div class="eco-card" data-aos="fade-up" data-aos-delay="40">
-            <div class="eco-tag">
-              <span class="eco-dot"></span> HP4 – High Potential Product
+          <div
+            class="eco-card"
+            data-aos="fade-up"
+            data-aos-delay="40"
+          >
+            <div class="eco-tag" data-i18n="hp4.eco1.tag">
+              <span class="eco-dot"></span>
+              HP4 – High Potential Product
             </div>
-            <div class="eco-title">Sản phẩm chủ lực vùng miền</div>
-            <div class="eco-pill">Lúa gạo, cà phê, hồ tiêu, rau củ quả…</div>
-            <p>
-              Xác định & phát triển các sản phẩm chủ lực, đặc trưng theo vùng –
-              làm “hạt nhân” cho mỗi Chuỗi Cung cầu và Chuỗi Giá trị nông sản.
+            <div class="eco-title" data-i18n="hp4.eco1.title">
+              Sản phẩm chủ lực vùng miền
+            </div>
+            <div class="eco-pill" data-i18n="hp4.eco1.pill">
+              Lúa gạo, cà phê, hồ tiêu, rau củ quả…
+            </div>
+            <p data-i18n="hp4.eco1.text">
+              Xác định &amp; phát triển các sản phẩm chủ lực, đặc trưng theo
+              vùng – làm “hạt nhân” cho mỗi Chuỗi Cung cầu và Chuỗi Giá trị nông
+              sản.
             </p>
           </div>
 
-          <div class="eco-card" data-aos="fade-up" data-aos-delay="80">
-            <div class="eco-tag">
-              <span class="eco-dot" style="background: #38bdf8"></span> HP4
+          <div
+            class="eco-card"
+            data-aos="fade-up"
+            data-aos-delay="80"
+          >
+            <div class="eco-tag" data-i18n="hp4.eco2.tag">
+              <span class="eco-dot" style="background: #38bdf8"></span>
+              HP4
             </div>
-            <div class="eco-title">Mạng lưới đối tác hiệu suất cao</div>
-            <div class="eco-pill">Nông dân – HTX – DN – Nhà phân phối</div>
-            <p>
+            <div class="eco-title" data-i18n="hp4.eco2.title">
+              Mạng lưới đối tác hiệu suất cao
+            </div>
+            <div class="eco-pill" data-i18n="hp4.eco2.pill">
+              Nông dân – HTX – DN – Nhà phân phối
+            </div>
+            <p data-i18n="hp4.eco2.text">
               Kết nối người sản xuất, HTX, doanh nghiệp chế biến, logistics,
               phân phối… trong một cơ chế hợp tác rõ ràng, dựa trên dữ liệu và
               cam kết dài hạn.
             </p>
           </div>
 
-          <div class="eco-card" data-aos="fade-up" data-aos-delay="120">
-            <div class="eco-tag">
-              <span class="eco-dot" style="background: #f97316"></span> HP4 –
-              High Profit
+          <div
+            class="eco-card"
+            data-aos="fade-up"
+            data-aos-delay="120"
+          >
+            <div class="eco-tag" data-i18n="hp4.eco3.tag">
+              <span class="eco-dot" style="background: #f97316"></span>
+              HP4 – High Profit
             </div>
-            <div class="eco-title">Tối ưu lợi nhuận cho mọi bên</div>
-            <div class="eco-pill">Cắt giảm trung gian</div>
-            <p>
+            <div class="eco-title" data-i18n="hp4.eco3.title">
+              Tối ưu lợi nhuận cho mọi bên
+            </div>
+            <div class="eco-pill" data-i18n="hp4.eco3.pill">
+              Cắt giảm trung gian
+            </div>
+            <p data-i18n="hp4.eco3.text">
               Tối ưu chi phí, giảm thất thoát, tăng giá trị gia tăng tại vùng
               nguyên liệu, giúp các bên tham gia đều có “phần” rõ ràng trong
               Chuỗi Giá trị.
             </p>
           </div>
 
-          <div class="eco-card" data-aos="fade-up" data-aos-delay="160">
-            <div class="eco-tag">
-              <span class="eco-dot" style="background: #a855f7"></span> HP4 –
-              High Priority
+          <div
+            class="eco-card"
+            data-aos="fade-up"
+            data-aos-delay="160"
+          >
+            <div class="eco-tag" data-i18n="hp4.eco4.tag">
+              <span class="eco-dot" style="background: #a855f7"></span>
+              HP4 – High Priority
             </div>
-            <div class="eco-title">Tuân thủ pháp luật</div>
-            <div class="eco-pill">Chuẩn Việt Nam & Quốc tế</div>
-            <p>
+            <div class="eco-title" data-i18n="hp4.eco4.title">
+              Tuân thủ pháp luật
+            </div>
+            <div class="eco-pill" data-i18n="hp4.eco4.pill">
+              Chuẩn Việt Nam &amp; Quốc tế
+            </div>
+            <p data-i18n="hp4.eco4.text">
               Đảm bảo sản phẩm, quy trình sản xuất, chế biến, thương mại đều
-              tuân thủ các tiêu chuẩn luật pháp trong nước & quốc tế, phù hợp
+              tuân thủ các tiêu chuẩn luật pháp trong nước &amp; quốc tế, phù hợp
               xu hướng kinh tế xanh, tín chỉ carbon và phát triển bền vững.
             </p>
           </div>
@@ -2131,13 +2236,19 @@
       <div class="section-divider"></div>
 
       <!-- 4 COMPONENTS HP1–HP4 -->
-      <section id="he-sinh-thai" data-aos="fade-up" data-aos-duration="900">
+      <section
+        id="he-sinh-thai"
+        data-aos="fade-up"
+        data-aos-duration="900"
+      >
         <div class="section-header">
-          <span class="section-kicker">04 hợp phần</span>
-          <h2 class="section-title">
+          <span class="section-kicker" data-i18n="hpSystem.kicker">
+            04 hợp phần
+          </span>
+          <h2 class="section-title" data-i18n="hpSystem.title">
             Quy hoạch Hệ sinh thái AFDEX theo 4 hợp phần HP1–HP4
           </h2>
-          <p class="section-desc">
+          <p class="section-desc" data-i18n="hpSystem.desc">
             Để Chủ thể và Chuyên gia tham gia hưởng lợi nhanh chóng, AFDEX quy
             hoạch bộ mã sản phẩm, Điểm Sàn, dịch vụ và giao dịch thành 04 hợp
             phần: HP1 – Chuỗi ngành hàng OCOP; HP2 – Mạng lưới Điểm Sàn địa
@@ -2147,46 +2258,60 @@
 
         <div class="grid-2">
           <div class="card">
-            <h3 class="card-title-sm">HP1 – Thiết lập các Chuỗi Ngành hàng
-              OCOP</h3>
+            <h3 class="card-title-sm" data-i18n="hpSystem.hp1.title">
+              HP1 – Thiết lập các Chuỗi Ngành hàng OCOP
+            </h3>
             <ul class="list">
               <li>
-                <span class="list-bullet"></span><span>Quy hoạch bộ mã sản phẩm
-                  OCOP/Mô hình với trên
-                  <strong>1.000.000 mã sản phẩm tiêu dùng & mô hình đầu
-                    tư</strong>.</span>
+                <span class="list-bullet"></span>
+                <span data-i18n="hpSystem.hp1.li1">
+                  Quy hoạch bộ mã sản phẩm OCOP/Mô hình với trên
+                  <strong>
+                    1.000.000 mã sản phẩm tiêu dùng &amp; mô hình đầu tư
+                  </strong>
+                  .
+                </span>
               </li>
               <li>
-                <span class="list-bullet"></span><span>5 nhóm ngành: (CN1) Trồng
-                  tỉa chiết ghép, (CN2) Chăn nuôi
-                  bản địa, (CN3) Thủy sản vùng miền, (CN4) Thủ công kỹ nghệ,
-                  (CN5) Nam y Nam dược.</span>
+                <span class="list-bullet"></span>
+                <span data-i18n="hpSystem.hp1.li2">
+                  5 nhóm ngành: (CN1) Trồng tỉa chiết ghép, (CN2) Chăn nuôi bản
+                  địa, (CN3) Thủy sản vùng miền, (CN4) Thủ công kỹ nghệ, (CN5)
+                  Nam y Nam dược.
+                </span>
               </li>
               <li>
-                <span class="list-bullet"></span><span>Chia thành 60 “Chuỗi Cung
-                  cầu Nông sản Việt”; mỗi chuỗi gồm
-                  21 Chuỗi sản phẩm chủ lực và 7 phân khúc mục tiêu PK1–PK7 (từ
-                  gene giống đến thương mại sản phẩm/dịch vụ).</span>
+                <span class="list-bullet"></span>
+                <span data-i18n="hpSystem.hp1.li3">
+                  Chia thành 60 “Chuỗi Cung cầu Nông sản Việt”; mỗi chuỗi gồm 21
+                  Chuỗi sản phẩm chủ lực và 7 phân khúc mục tiêu PK1–PK7 (từ
+                  gene giống đến thương mại sản phẩm/dịch vụ).
+                </span>
               </li>
             </ul>
           </div>
 
           <div class="card">
-            <h3 class="card-title-sm">HP2 – Mạng lưới Điểm Sàn địa danh</h3>
+            <h3 class="card-title-sm" data-i18n="hpSystem.hp2.title">
+              HP2 – Mạng lưới Điểm Sàn địa danh
+            </h3>
             <ul class="list">
               <li>
-                <span class="list-bullet"></span><span>Quy hoạch bộ mã Điểm
-                  Sàn/Địa danh theo 06 cấp: ĐSC1 (Hệ Sinh
-                  thái AFDEX), ĐSC2 (Điều phối khu vực), ĐSC3 (Điều phối dịch
-                  vụ tỉnh/thành), ĐSC4 (Mô hình huyện/thị), ĐSC5 (Đại lý dịch
-                  vụ xã/phường), ĐSC6 (Điểm giao thương cơ sở
-                  thôn/bản/vệ tinh).</span>
+                <span class="list-bullet"></span>
+                <span data-i18n="hpSystem.hp2.li1">
+                  Quy hoạch bộ mã Điểm Sàn/Địa danh theo 06 cấp: ĐSC1 (Hệ Sinh
+                  thái AFDEX), ĐSC2 (Điều phối khu vực), ĐSC3 (Điều phối dịch vụ
+                  tỉnh/thành), ĐSC4 (Mô hình huyện/thị), ĐSC5 (Đại lý dịch vụ
+                  xã/phường), ĐSC6 (Điểm giao thương cơ sở
+                  thôn/bản/vệ tinh).
+                </span>
               </li>
               <li>
-                <span class="list-bullet"></span><span>3 Cụm Mô hình điều phối
-                  (CMH1, CMH2, CMH3) giúp cấp tỉnh, khu
-                  vực và Hệ sinh thái toàn quốc phối hợp nhịp
-                  nhàng.</span>
+                <span class="list-bullet"></span>
+                <span data-i18n="hpSystem.hp2.li2">
+                  3 Cụm Mô hình điều phối (CMH1, CMH2, CMH3) giúp cấp tỉnh, khu
+                  vực và Hệ sinh thái toàn quốc phối hợp nhịp nhàng.
+                </span>
               </li>
             </ul>
           </div>
@@ -2194,61 +2319,83 @@
 
         <div class="grid-2" style="margin-top: 1.2rem">
           <div class="card">
-            <h3 class="card-title-sm">HP3 – Đào tạo khai thác Dịch vụ
-              Công–tư</h3>
-            <p style="font-size: 0.84rem; margin-bottom: 0.35rem">
+            <h3 class="card-title-sm" data-i18n="hpSystem.hp3.title">
+              HP3 – Đào tạo khai thác Dịch vụ Công–tư
+            </h3>
+            <p
+              style="font-size: 0.84rem; margin-bottom: 0.35rem"
+              data-i18n="hpSystem.hp3.intro"
+            >
               Quy hoạch bộ mã Chuyên gia/Dịch vụ AFDEX theo 06 nhóm:
             </p>
             <ul class="list">
               <li>
-                <span class="list-bullet"></span><span>(DV1) Tài chính, bảo
-                  hiểm, tín dụng, ngân hàng.</span>
+                <span class="list-bullet"></span>
+                <span data-i18n="hpSystem.hp3.li1">
+                  (DV1) Tài chính, bảo hiểm, tín dụng, ngân hàng.
+                </span>
               </li>
               <li>
-                <span class="list-bullet"></span><span>(DV2) Đào tạo thực hành,
-                  cung cấp nhân lực.</span>
+                <span class="list-bullet"></span>
+                <span data-i18n="hpSystem.hp3.li2">
+                  (DV2) Đào tạo thực hành, cung cấp nhân lực.
+                </span>
               </li>
               <li>
-                <span class="list-bullet"></span><span>(DV3) Kiểm soát chất
-                  lượng, chuyển giao công nghệ.</span>
+                <span class="list-bullet"></span>
+                <span data-i18n="hpSystem.hp3.li3">
+                  (DV3) Kiểm soát chất lượng, chuyển giao công nghệ.
+                </span>
               </li>
               <li>
-                <span class="list-bullet"></span><span>(DV4) Phát triển thị
-                  trường, chăm sóc thành viên.</span>
+                <span class="list-bullet"></span>
+                <span data-i18n="hpSystem.hp3.li4">
+                  (DV4) Phát triển thị trường, chăm sóc thành viên.
+                </span>
               </li>
               <li>
-                <span class="list-bullet"></span><span>(DV5) Quản lý nhu cầu,
-                  tập trung nguồn lực.</span>
+                <span class="list-bullet"></span>
+                <span data-i18n="hpSystem.hp3.li5">
+                  (DV5) Quản lý nhu cầu, tập trung nguồn lực.
+                </span>
               </li>
               <li>
-                <span class="list-bullet"></span><span>(DV6) Quản trị mô hình,
-                  phát triển hệ thống – trên nền
-                  <strong>9 tầng thông tin</strong>.</span>
+                <span class="list-bullet"></span>
+                <span data-i18n="hpSystem.hp3.li6">
+                  (DV6) Quản trị mô hình, phát triển hệ thống – trên nền
+                  <strong>9 tầng thông tin</strong>.
+                </span>
               </li>
             </ul>
           </div>
 
           <div class="card">
-            <h3 class="card-title-sm">HP4 – Cơ chế “Đồng bộ vận hành”</h3>
+            <h3 class="card-title-sm" data-i18n="hpSystem.hp4.title">
+              HP4 – Cơ chế “Đồng bộ vận hành”
+            </h3>
             <ul class="list">
               <li>
-                <span class="list-bullet"></span><span>Quy hoạch bộ mã Giao
-                  dịch/Chủ thể/Chuyên gia thông qua 03 Cụm
+                <span class="list-bullet"></span>
+                <span data-i18n="hpSystem.hp4.li1">
+                  Quy hoạch bộ mã Giao dịch/Chủ thể/Chuyên gia thông qua 03 Cụm
                   Mô hình: (CMH1) Nông nghiệp sinh thái, (CMH2) Chế biến bảo
-                  quản, (CMH3) Thương mại dịch vụ.</span>
+                  quản, (CMH3) Thương mại dịch vụ.
+                </span>
               </li>
               <li>
-                <span class="list-bullet"></span><span>04 mảng đầu tư: (MĐT1)
-                  Bất động sản liên quan, (MĐT2) Hạ tầng
-                  thiết bị, (MĐT3) Sáng chế bản quyền, (MĐT4) Giá trị đồng
-                  bộ.</span>
+                <span class="list-bullet"></span>
+                <span data-i18n="hpSystem.hp4.li2">
+                  04 mảng đầu tư: (MĐT1) Bất động sản liên quan, (MĐT2) Hạ tầng
+                  thiết bị, (MĐT3) Sáng chế bản quyền, (MĐT4) Giá trị đồng bộ.
+                </span>
               </li>
               <li>
-                <span class="list-bullet"></span><span>03 Hệ điều phối: (HĐPĐ),
-                  (HĐPK), (HĐPTH) cùng 33 khái niệm &amp;
-                  144 cụm từ khóa – tạo khối đại đoàn kết chuyên gia &amp; chủ
-                  thể
-                  cùng phát triển.</span>
+                <span class="list-bullet"></span>
+                <span data-i18n="hpSystem.hp4.li3">
+                  03 Hệ điều phối: (HĐPĐ), (HĐPK), (HĐPTH) cùng 33 khái niệm &amp;
+                  144 cụm từ khóa – tạo khối đại đoàn kết chuyên gia &amp; chủ thể
+                  cùng phát triển.
+                </span>
               </li>
             </ul>
           </div>
@@ -2258,40 +2405,53 @@
       <div class="section-divider"></div>
 
       <!-- PRODUCT GROUPS -->
-      <section id="san-pham" data-aos="fade-up" data-aos-duration="900">
+      <section
+        id="san-pham"
+        data-aos="fade-up"
+        data-aos-duration="900"
+      >
         <div class="section-header">
-          <span class="section-kicker">Ngành hàng chủ lực</span>
-          <h2 class="section-title">
+          <span class="section-kicker" data-i18n="products.kicker">
+            Ngành hàng chủ lực
+          </span>
+          <h2 class="section-title" data-i18n="products.title">
             Những nhóm sản phẩm AFDEX ưu tiên quy hoạch
           </h2>
         </div>
 
         <div class="product-grid">
           <div class="product-card">
-            <div class="product-title">Nông sản Thực phẩm</div>
-            <p>
+            <div class="product-title" data-i18n="products.card1.title">
+              Nông sản Thực phẩm
+            </div>
+            <p data-i18n="products.card1.text">
               Gạo, cà phê, hồ tiêu, chè, rau củ quả… – các ngành hàng liên quan
               trực tiếp đến an ninh lương thực &amp; xuất khẩu.
             </p>
           </div>
           <div class="product-card">
-            <div class="product-title">Thủy hải sản</div>
-            <p>
+            <div class="product-title" data-i18n="products.card2.title">
+              Thủy hải sản
+            </div>
+            <p data-i18n="products.card2.text">
               Các sản phẩm nuôi trồng &amp; đánh bắt gắn với Chuỗi Cung cầu và
-              Điểm
-              Sàn cảng cá, vùng nuôi, nhà máy chế biến.
+              Điểm Sàn cảng cá, vùng nuôi, nhà máy chế biến.
             </p>
           </div>
           <div class="product-card">
-            <div class="product-title">Nam y – Nam dược</div>
-            <p>
+            <div class="product-title" data-i18n="products.card3.title">
+              Nam y – Nam dược
+            </div>
+            <p data-i18n="products.card3.text">
               Dược liệu, thuốc Nam, sản phẩm chăm sóc sức khỏe dựa trên tri thức
               bản địa, truy xuất vùng trồng rõ ràng.
             </p>
           </div>
           <div class="product-card">
-            <div class="product-title">Sản phẩm Làng nghề</div>
-            <p>
+            <div class="product-title" data-i18n="products.card4.title">
+              Sản phẩm Làng nghề
+            </div>
+            <p data-i18n="products.card4.text">
               Thủ công mỹ nghệ, đặc sản vùng miền – nâng tầm chuỗi giá trị
               thông qua mã hóa sản phẩm &amp; Chuỗi Cung cầu.
             </p>
@@ -2302,57 +2462,75 @@
       <div class="section-divider"></div>
 
       <!-- PARTNERS & ACHIEVEMENTS -->
-      <section id="doi-tac" data-aos="fade-up" data-aos-duration="900">
+      <section
+        id="doi-tac"
+        data-aos="fade-up"
+        data-aos-duration="900"
+      >
         <div class="section-header">
-          <span class="section-kicker">Thành tựu & Đối tác chiến lược</span>
-          <h2 class="section-title">
-            Hệ sinh thái được xây bằng hợp tác trong nước & quốc tế
+          <span class="section-kicker" data-i18n="partners.kicker">
+            Thành tựu &amp; Đối tác chiến lược
+          </span>
+          <h2 class="section-title" data-i18n="partners.title">
+            Hệ sinh thái được xây bằng hợp tác trong nước &amp; quốc tế
           </h2>
         </div>
 
         <div class="partner-grid">
           <div class="partner-card">
-            <div class="badge-mini">Đối tác trong nước</div>
-            <div class="partner-title">
+            <div class="badge-mini" data-i18n="partners.card1.badge">
+              Đối tác trong nước
+            </div>
+            <div class="partner-title" data-i18n="partners.card1.title">
               Liên minh Hợp tác xã Việt Nam (VCA)
             </div>
-            <p>
+            <p data-i18n="partners.card1.text1">
               Ngày 01/4/2021, AFDEX làm việc với lãnh đạo VCA để xây dựng giải
               pháp Chuỗi Cung ứng hiệu quả, mở đường cho hợp tác sâu rộng với
               mạng lưới HTX toàn quốc.
             </p>
             <ul class="list" style="margin-top: 0.45rem">
               <li>
-                <span class="list-bullet"></span><span>Bộ NN&amp;PTNT có văn bản
-                  đề
-                  nghị UBND các tỉnh tạo điều kiện
-                  lồng ghép AFDEX vào Chương trình Nông thôn
-                  mới.</span>
+                <span class="list-bullet"></span>
+                <span data-i18n="partners.card1.li1">
+                  Bộ NN&amp;PTNT có văn bản đề nghị UBND các tỉnh tạo điều kiện
+                  lồng ghép AFDEX vào Chương trình Nông thôn mới.
+                </span>
               </li>
             </ul>
           </div>
 
           <div class="partner-card">
-            <div class="badge-mini">Đối tác quốc tế</div>
-            <div class="partner-title">Noble Network – BWA Global</div>
-            <p>
+            <div class="badge-mini" data-i18n="partners.card2.badge">
+              Đối tác quốc tế
+            </div>
+            <div class="partner-title" data-i18n="partners.card2.title">
+              Noble Network – BWA Global
+            </div>
+            <p data-i18n="partners.card2.text1">
               Ngày 24/03/2021, AFDEX EcoSystem và Noble Network ký kết thỏa
               thuận hợp tác chiến lược nhằm xây dựng các giải pháp Chuỗi Cung
               ứng bền vững &amp; mở rộng thị trường xuất khẩu.
             </p>
-            <p style="font-size: 0.8rem; margin-top: 0.35rem">
-              Đồng thời, dự án hợp tác với quỹ <strong>BestB Capital</strong> và
-              các nhà đầu tư khác để thu hút nguồn vốn, tạo cơ hội lớn cho các
-              đối tác tham gia Hệ sinh thái AFDEX.
+            <p
+              style="font-size: 0.8rem; margin-top: 0.35rem"
+              data-i18n="partners.card2.text2"
+            >
+              Đồng thời, dự án hợp tác với quỹ
+              <strong>BestB Capital</strong>
+              và các nhà đầu tư khác để thu hút nguồn vốn, tạo cơ hội lớn cho
+              các đối tác tham gia Hệ sinh thái AFDEX.
             </p>
           </div>
 
           <div class="partner-card">
-            <div class="badge-mini">Khoa học & tín chỉ carbon</div>
-            <div class="partner-title">
-              Trường Đại học, Viện nghiên cứu & Dự án Carbon
+            <div class="badge-mini" data-i18n="partners.card3.badge">
+              Khoa học &amp; tín chỉ carbon
             </div>
-            <p>
+            <div class="partner-title" data-i18n="partners.card3.title">
+              Trường Đại học, Viện nghiên cứu &amp; Dự án Carbon
+            </div>
+            <p data-i18n="partners.card3.text1">
               Hợp tác với các trường đại học, viện nghiên cứu để ứng dụng công
               nghệ mới vào sản xuất – từ canh tác sinh thái, chế biến, đến quản
               lý Chuỗi Giá trị tín chỉ carbon (trồng rừng, nông nghiệp các-bon
@@ -2365,10 +2543,16 @@
       <div class="section-divider"></div>
 
       <!-- TIMELINE -->
-      <section id="lo-trinh" data-aos="fade-up" data-aos-duration="900">
+      <section
+        id="lo-trinh"
+        data-aos="fade-up"
+        data-aos-duration="900"
+      >
         <div class="section-header">
-          <span class="section-kicker">Lịch sử & lộ trình triển khai</span>
-          <h2 class="section-title">
+          <span class="section-kicker" data-i18n="timeline.kicker">
+            Lịch sử &amp; lộ trình triển khai
+          </span>
+          <h2 class="section-title" data-i18n="timeline.title">
             Từ Niên giám 2010 đến Hệ sinh thái AFDEX 2030+
           </h2>
         </div>
@@ -2378,7 +2562,7 @@
             <div class="timeline-step">
               <div class="timeline-dot"></div>
               <div class="timeline-year">2010 – 2011</div>
-              <div class="timeline-label">
+              <div class="timeline-label" data-i18n="timeline.step1.text">
                 Phát hành “Niên giám Nông nghiệp Thực phẩm Việt Nam – 2010”.
                 Được công nhận là doanh nghiệp xã hội và nhận tài trợ 100.000
                 USD từ Quỹ Tia sáng.
@@ -2388,7 +2572,7 @@
             <div class="timeline-step">
               <div class="timeline-dot"></div>
               <div class="timeline-year">2012 – 2020</div>
-              <div class="timeline-label">
+              <div class="timeline-label" data-i18n="timeline.step2.text">
                 Hoàn thiện Ý tưởng Hệ Sinh thái AFDEX theo 4 hợp phần; nghiên
                 cứu 60 Chuỗi Cung ứng và 6 tầng Điểm Sàn; xây dựng 9 tầng thông
                 tin.
@@ -2398,22 +2582,22 @@
             <div class="timeline-step">
               <div class="timeline-dot"></div>
               <div class="timeline-year">2021</div>
-              <div class="timeline-label">
+              <div class="timeline-label" data-i18n="timeline.step3.text">
                 Làm việc với VCA, ký kết cùng Noble Network; Bộ NN&amp;PTNT đề
-                nghị
-                các tỉnh tạo điều kiện lồng ghép Đề án AFDEX vào chương trình
-                Nông thôn mới.
+                nghị các tỉnh tạo điều kiện lồng ghép Đề án AFDEX vào chương
+                trình Nông thôn mới.
               </div>
             </div>
 
             <div class="timeline-step">
               <div class="timeline-dot"></div>
               <div class="timeline-year">2025 – 2030</div>
-              <div class="timeline-label">
-                <strong>Giai đoạn triển khai:</strong> 2025–2026: Pilot 5–10
-                Chuỗi Cung cầu tại 2–3 tỉnh. 2026–2028: Mở rộng 30+ Chuỗi, tích
-                hợp tín chỉ carbon &amp; ngân hàng số. 2028–2030+: Hoàn thiện 60
-                Chuỗi Cung cầu Nông sản Việt, kết nối thị trường quốc tế.
+              <div class="timeline-label" data-i18n="timeline.step4.text">
+                <strong>Giai đoạn triển khai:</strong>
+                2025–2026: Pilot 5–10 Chuỗi Cung cầu tại 2–3 tỉnh. 2026–2028:
+                Mở rộng 30+ Chuỗi, tích hợp tín chỉ carbon &amp; ngân hàng số.
+                2028–2030+: Hoàn thiện 60 Chuỗi Cung cầu Nông sản Việt, kết nối
+                thị trường quốc tế.
               </div>
             </div>
           </div>
@@ -2423,10 +2607,16 @@
       <div class="section-divider"></div>
 
       <!-- FAQ -->
-      <section id="faq" data-aos="fade-up" data-aos-duration="900">
+      <section
+        id="faq"
+        data-aos="fade-up"
+        data-aos-duration="900"
+      >
         <div class="section-header">
-          <span class="section-kicker">Câu hỏi thường gặp</span>
-          <h2 class="section-title">
+          <span class="section-kicker" data-i18n="faq.kicker">
+            Câu hỏi thường gặp
+          </span>
+          <h2 class="section-title" data-i18n="faq.title">
             Một vài câu hỏi mà đối tác hay đặt ra
           </h2>
         </div>
@@ -2434,11 +2624,12 @@
         <div class="faq-list">
           <div class="faq-item">
             <div class="faq-question">
-              <span>AFDEX khác gì so với các sàn TMĐT nông sản thông
-                thường?</span>
+              <span data-i18n="faq.q1">
+                AFDEX khác gì so với các sàn TMĐT nông sản thông thường?
+              </span>
               <div class="faq-toggle">+</div>
             </div>
-            <div class="faq-answer">
+            <div class="faq-answer" data-i18n="faq.a1">
               AFDEX không chỉ là nơi đăng tin mua–bán, mà là hệ sinh thái đầy
               đủ: quy hoạch Chuỗi Cung cầu, Điểm Sàn địa danh, dịch vụ công–tư,
               cơ chế đầu tư… Mỗi sản phẩm, mô hình, dịch vụ đều được mã hóa và
@@ -2449,15 +2640,15 @@
 
           <div class="faq-item">
             <div class="faq-question">
-              <span>Địa phương muốn lồng ghép AFDEX vào Nông thôn mới thì bắt
-                đầu
-                từ đâu?</span>
+              <span data-i18n="faq.q2">
+                Địa phương muốn lồng ghép AFDEX vào Nông thôn mới thì bắt đầu từ
+                đâu?
+              </span>
               <div class="faq-toggle">+</div>
             </div>
-            <div class="faq-answer">
+            <div class="faq-answer" data-i18n="faq.a2">
               Thường bắt đầu từ 3 bước: (1) Khảo sát sản phẩm chủ lực &amp;
-              Chuỗi
-              ngành hàng OCOP (HP1); (2) Quy hoạch Điểm Sàn địa danh cấp
+              Chuỗi ngành hàng OCOP (HP1); (2) Quy hoạch Điểm Sàn địa danh cấp
               tỉnh/huyện/xã (HP2); (3) Thử nghiệm một số gói dịch vụ công–tư
               (HP3) gắn với mô hình cụ thể, sau đó mới mở rộng toàn Chuỗi.
             </div>
@@ -2465,11 +2656,12 @@
 
           <div class="faq-item">
             <div class="faq-question">
-              <span>Doanh nghiệp, HTX, chuyên gia tham gia Hệ sinh thái thì được
-                gì?</span>
+              <span data-i18n="faq.q3">
+                Doanh nghiệp, HTX, chuyên gia tham gia Hệ sinh thái thì được gì?
+              </span>
               <div class="faq-toggle">+</div>
             </div>
-            <div class="faq-answer">
+            <div class="faq-answer" data-i18n="faq.a3">
               Mỗi Chủ thể/Chuyên gia được quy hoạch mã riêng, tham gia vào
               Chuỗi Cung cầu phù hợp, có cơ hội hưởng lợi từ hợp đồng dài hạn,
               dịch vụ tài chính, chương trình tín chỉ carbon, chuyển giao công
@@ -2484,9 +2676,10 @@
     <footer>
       <div class="footer-inner">
         <div>
-          <div class="footer-brand-title">Công ty Cổ phần Hệ sinh thái
-            AFDEX</div>
-          <p class="footer-brand-desc">
+          <div class="footer-brand-title" data-i18n="footer.brand.title">
+            Công ty Cổ phần Hệ sinh thái AFDEX
+          </div>
+          <p class="footer-brand-desc" data-i18n="footer.brand.desc">
             Tiên phong xây dựng Hệ sinh thái Chuỗi Cung cầu Nông sản Việt, dựa
             trên Niên giám Nông nghiệp Thực phẩm 2010 và hơn 10 năm nghiên cứu,
             hợp tác trong – ngoài nước.
@@ -2495,49 +2688,110 @@
 
         <div class="footer-cols">
           <div>
-            <div class="footer-col-title">Dự án AFDEX</div>
+            <div class="footer-col-title" data-i18n="footer.col1.title">
+              Dự án AFDEX
+            </div>
             <ul class="footer-list">
-              <li><span>Giới thiệu & lịch sử hình thành</span></li>
-              <li><span>Mô hình HP4 & 4 hợp phần</span></li>
-              <li><span>Chuỗi Cung cầu & Điểm Sàn</span></li>
-            </ul>
-          </div>
-          <div>
-            <div class="footer-col-title">Liên hệ</div>
-            <ul class="footer-list">
-              <li><span>Email: info@afdex.vn (ví dụ)</span></li>
-              <li><span>Điện thoại: (+84) xxx xxx xxx</span></li>
               <li>
-                <span>Địa chỉ: Bổ sung theo thông tin chính thức</span>
+                <span data-i18n="footer.col1.li1">
+                  Giới thiệu &amp; lịch sử hình thành
+                </span>
+              </li>
+              <li>
+                <span data-i18n="footer.col1.li2">
+                  Mô hình HP4 &amp; 4 hợp phần
+                </span>
+              </li>
+              <li>
+                <span data-i18n="footer.col1.li3">
+                  Chuỗi Cung cầu &amp; Điểm Sàn
+                </span>
               </li>
             </ul>
           </div>
           <div>
-            <div class="footer-col-title">Tài liệu</div>
+            <div class="footer-col-title" data-i18n="footer.col2.title">
+              Liên hệ
+            </div>
             <ul class="footer-list">
-              <li><a class="footer-link">Thuyết minh dự án</a></li>
-              <li><a class="footer-link">Slide trình bày</a></li>
-              <li><a class="footer-link">Tài liệu kỹ thuật & cơ sở dữ
-                  liệu</a></li>
+              <li>
+                <span data-i18n="footer.col2.li1">
+                  Email: info@afdex.vn (ví dụ)
+                </span>
+              </li>
+              <li>
+                <span data-i18n="footer.col2.li2">
+                  Điện thoại: (+84) xxx xxx xxx
+                </span>
+              </li>
+              <li>
+                <span data-i18n="footer.col2.li3">
+                  Địa chỉ: Bổ sung theo thông tin chính thức
+                </span>
+              </li>
             </ul>
           </div>
           <div>
-            <div class="footer-col-title">Kết nối</div>
+            <div class="footer-col-title" data-i18n="footer.col3.title">
+              Tài liệu
+            </div>
             <ul class="footer-list">
-              <li><a class="footer-link">Website chính thức</a></li>
-              <li><a class="footer-link">Fanpage / Zalo OA</a></li>
-              <li><a class="footer-link">Kênh YouTube / Livestream</a></li>
+              <li>
+                <a class="footer-link" data-i18n="footer.col3.li1">
+                  Thuyết minh dự án
+                </a>
+              </li>
+              <li>
+                <a class="footer-link" data-i18n="footer.col3.li2">
+                  Slide trình bày
+                </a>
+              </li>
+              <li>
+                <a class="footer-link" data-i18n="footer.col3.li3">
+                  Tài liệu kỹ thuật &amp; cơ sở dữ liệu
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title" data-i18n="footer.col4.title">
+              Kết nối
+            </div>
+            <ul class="footer-list">
+              <li>
+                <a class="footer-link" data-i18n="footer.col4.li1">
+                  Website chính thức
+                </a>
+              </li>
+              <li>
+                <a class="footer-link" data-i18n="footer.col4.li2">
+                  Fanpage / Zalo OA
+                </a>
+              </li>
+              <li>
+                <a class="footer-link" data-i18n="footer.col4.li3">
+                  Kênh YouTube / Livestream
+                </a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <div>© 2025 · AFDEX EcoSystem</div>
+        <div data-i18n="footer.bottom.copy">
+          © 2025 · AFDEX EcoSystem
+        </div>
         <div class="footer-badges-row">
-          <div class="footer-chip">Chuỗi Cung cầu Nông sản Việt</div>
-          <div class="footer-chip">Nông nghiệp sinh thái đa giá trị</div>
-          <div class="footer-chip">Chuyển đổi số & tín chỉ carbon</div>
+          <div class="footer-chip" data-i18n="footer.bottom.chip1">
+            Chuỗi Cung cầu Nông sản Việt
+          </div>
+          <div class="footer-chip" data-i18n="footer.bottom.chip2">
+            Nông nghiệp sinh thái đa giá trị
+          </div>
+          <div class="footer-chip" data-i18n="footer.bottom.chip3">
+            Chuyển đổi số &amp; tín chỉ carbon
+          </div>
         </div>
       </div>
     </footer>
@@ -2546,31 +2800,363 @@
     <script>
       AOS.init({ once: true, offset: 80 });
 
+      // === ĐA NGÔN NGỮ: CHỈ CẦN KHAI BÁO EN, VI LẤY TỪ TEXT GỐC ===
+      const translations = {
+        en: {
+          "brand.tagline": "Vietnam Agri Supply–Demand Chains",
+
+          "nav.intro": "Overview",
+          "nav.vision": "Vision",
+          "nav.hp4": "HP4 Model",
+          "nav.partners": "Partners",
+          "nav.products": "Product groups",
+          "nav.timeline": "Timeline",
+          "nav.faq": "FAQ",
+          "nav.cta": "Visit our Website →",
+
+          "hero.badge":
+            'AFDEX Ecosystem Joint Stock Company <span class="badge-tag">Pho Cho</span>',
+          "hero.title":
+            'Digitizing the flow of <span>agri products &amp; ecology</span> on a single platform.',
+          "hero.sub":
+            'AFDEX is an ecosystem that orchestrates 60 “Vietnam Agricultural Supply–Demand Chains”, built on more than 10 years of research and agricultural data – from the <strong>Vietnam Agriculture &amp; Food Yearbook 2010</strong> to today’s multi-value integrated digital agriculture platform.',
+          "hero.tag1":
+            "Multifunctional Ecological Agriculture (MEA)",
+          "hero.tag2":
+            "HP4 mechanism – High Potential / Partnership / Profit / Priority",
+          "hero.tag3":
+            "Integrated into the National New Rural Development Programme",
+          "hero.metric1":
+            "Vietnam Agricultural Supply–Demand Chains planned.",
+          "hero.metric2":
+            "Information layers for management and traceability down to local Trading Points.",
+          "hero.metric3":
+            "Years of research, pilots &amp; cooperation with ministries, cooperatives and universities.",
+          "hero.btnPrimary": "View Vision &amp; Mission 🌱",
+          "hero.btnSecondary":
+            "Explore the HP4 model &amp; 4 ecosystem components",
+          "hero.chipTop":
+            "AFDEX • Digital agriculture ecosystem",
+          "hero.chipBottom":
+            "Digitizing the flow of agri-products &amp; finance from production areas to the market.",
+
+          "countdown.badge":
+            '<span class="hero-countdown-badge-dot"></span>Countdown to the 9th of next month',
+          "countdown.subtitle":
+            "Milestone to deploy &amp; scale the AFDEX Ecosystem",
+          "countdown.dayLabel": "Days",
+          "countdown.hourLabel": "Hours",
+          "countdown.minuteLabel": "Minutes",
+          "countdown.secondLabel": "Seconds",
+
+          "modal.title": "The project is on the right track",
+          "modal.text":
+            'The platform is currently being <span class="notice-highlight">developed according to plan</span>. All technical modules and user experience are being refined step by step.',
+          "modal.badge":
+            '<span class="notice-dot"></span>Currently in completion &amp; internal testing phase',
+          "modal.etaLabel": "Expected completion:",
+          "modal.remaining": "Remaining:",
+          "modal.btnLater": "Later",
+          "modal.btnOk": "Got it",
+
+          "intro.kicker": "Project introduction",
+          "intro.title":
+            'AFDEX – From “Old Market Street” to the Vietnam Agri Supply–Demand Ecosystem',
+          "intro.desc":
+            "AFDEX Ecosystem JSC (formerly Pho Cho Co., Ltd.) pioneers comprehensive solutions to transform Vietnamese agriculture towards ecological, sustainable and high economic efficiency. The project is the result of more than 10 years of research, pilots and cooperation with MARD, local governments, cooperatives, universities and international partners.",
+
+          "intro.core.title": "Project core",
+          "intro.core.li1":
+            "Build an integrated digital agriculture platform linked to 60 “Vietnam Agricultural Supply–Demand Chains”.",
+          "intro.core.li2":
+            "Plan codes for products, models, Trading Points, experts and transactions so every link in the chain is digitised and connected.",
+          "intro.core.li3":
+            "Embed AFDEX into the National Target Programme on New Rural Development, helping provinces deploy quickly while still being systematic.",
+
+          "intro.tech.title": "Technology &amp; database",
+          "intro.tech.li1":
+            "Use Big Data to codify products, orders, customers, experts and production zones – the foundation of agricultural digital transformation.",
+          "intro.tech.li2":
+            "Implement a <strong>9-layer information system</strong> to manage and trace from nationwide yearbooks down to each village-level Trading Point.",
+          "intro.tech.li3":
+            "Inherit the database of the <em>“Vietnam Agriculture &amp; Food Yearbook – 2010”</em>, published under MARD’s direction and funded with 100,000 USD from Tia Sang Foundation (2011).",
+
+          "vision.kicker": "Vision &amp; Mission",
+          "vision.title":
+            "An ecological, transparent and high-value agriculture",
+
+          "vision.card1.label": "Vision",
+          "vision.card1.text":
+            "To build an integrated digital agriculture platform connecting <strong>60 “Vietnam Agricultural Supply–Demand Chains”</strong> to global markets – where products, services, knowledge and capital flow within one unified ecosystem.",
+
+          "vision.card2.label": "Mission",
+          "vision.card2.text":
+            "Provide optimal solutions for the whole agri-supply chain, ensuring transparency, food safety and traceability while improving the quality of life for farmers, cooperatives and Vietnamese agribusinesses.",
+
+          "vision.card3.label": "Strategic goal",
+          "vision.card3.text":
+            "Embed AFDEX into the <strong>National Target Programme on New Rural Development</strong>, enabling provinces to have a “digital map” of key products, Trading Points, public–private services and long-term investment mechanisms.",
+
+          "hp4.kicker": "Operating model",
+          "hp4.title":
+            "Multifunctional ecological agriculture &amp; the HP4 mechanism",
+          "hp4.desc":
+            "AFDEX applies the <strong>Multifunctional Ecological Agriculture</strong> model and the <strong>HP4</strong> operating mechanism (High Potential Product – High Performance Partnerships – High Profit – High Priority).",
+
+          "hp4.eco1.tag": "HP4 – High Potential Product",
+          "hp4.eco1.title": "Key regional products",
+          "hp4.eco1.pill": "Rice, coffee, pepper, tea, fruits &amp; vegetables…",
+          "hp4.eco1.text":
+            "Identify and develop key, signature products of each region as the “core” of every Supply–Demand Chain and Value Chain.",
+
+          "hp4.eco2.tag": "HP4 – High Performance",
+          "hp4.eco2.title": "High-performance partner network",
+          "hp4.eco2.pill":
+            "Farmers – cooperatives – enterprises – distributors",
+          "hp4.eco2.text":
+            "Connect producers, cooperatives, processors, logistics and distributors in a clear cooperation mechanism based on data and long-term commitments.",
+
+          "hp4.eco3.tag": "HP4 – High Profit",
+          "hp4.eco3.title": "Optimising profit for all parties",
+          "hp4.eco3.pill": "Reducing intermediaries",
+          "hp4.eco3.text":
+            "Optimise costs, reduce losses and increase value added at the production zone so every stakeholder has a clear share in the Value Chain.",
+
+          "hp4.eco4.tag": "HP4 – High Priority",
+          "hp4.eco4.title": "Compliance &amp; priority",
+          "hp4.eco4.pill": "Vietnamese &amp; international standards",
+          "hp4.eco4.text":
+            "Ensure products, production, processing and trade comply with domestic and international regulations, aligning with green economy trends, carbon credits and sustainable development.",
+
+          "hpSystem.kicker": "Four components",
+          "hpSystem.title":
+            "Planning the AFDEX Ecosystem via four HP1–HP4 components",
+          "hpSystem.desc":
+            "To help stakeholders and experts benefit quickly, AFDEX plans product codes, Trading Points, services and transactions into four components: HP1 – OCOP product chains; HP2 – Network of locality-based Trading Points; HP3 – Public–private services; HP4 – Synchronous operating mechanism.",
+
+          "hpSystem.hp1.title":
+            "HP1 – Establishing OCOP product chains",
+          "hpSystem.hp1.li1":
+            "Plan OCOP/product–model codes with more than <strong>1,000,000 consumer product codes &amp; investment models</strong>.",
+          "hpSystem.hp1.li2":
+            "Five sectors: (CN1) Cultivation &amp; grafting, (CN2) Indigenous livestock, (CN3) Regional aquaculture, (CN4) Handicrafts, (CN5) Traditional medicine &amp; herbal products.",
+          "hpSystem.hp1.li3":
+            "Split into 60 “Vietnam Agricultural Supply–Demand Chains”; each chain contains 21 key product chains and 7 target segments PK1–PK7 (from genetics &amp; inputs to trade in products/services).",
+
+          "hpSystem.hp2.title":
+            "HP2 – Network of locality-based Trading Points",
+          "hpSystem.hp2.li1":
+            "Plan Trading Point / locality codes across six levels: TP1 (AFDEX Ecosystem), TP2 (regional coordinators), TP3 (provincial service coordinators), TP4 (district models), TP5 (commune-level service agents), TP6 (village-level / satellite Trading Points).",
+          "hpSystem.hp2.li2":
+            "Three coordination model clusters (CMH1, CMH2, CMH3) enable provinces, regions and the nationwide ecosystem to operate in sync.",
+
+          "hpSystem.hp3.title":
+            "HP3 – Training &amp; exploiting public–private services",
+          "hpSystem.hp3.intro":
+            "Plan AFDEX expert/service codes into six groups:",
+          "hpSystem.hp3.li1":
+            "(SV1) Finance, insurance, credit, banking.",
+          "hpSystem.hp3.li2":
+            "(SV2) Practical training and workforce supply.",
+          "hpSystem.hp3.li3":
+            "(SV3) Quality control and technology transfer.",
+          "hpSystem.hp3.li4":
+            "(SV4) Market development and member care.",
+          "hpSystem.hp3.li5":
+            "(SV5) Demand management and resource pooling.",
+          "hpSystem.hp3.li6":
+            "(SV6) Model governance and system development – based on <strong>9 information layers</strong>.",
+
+          "hpSystem.hp4.title":
+            "HP4 – “Synchronous operation” mechanism",
+          "hpSystem.hp4.li1":
+            "Plan codes for Transactions / Stakeholders / Experts via three Model Clusters: (CMH1) Ecological agriculture, (CMH2) Processing &amp; preservation, (CMH3) Trade &amp; services.",
+          "hpSystem.hp4.li2":
+            "Four investment areas: (IA1) Related real estate, (IA2) Infrastructure &amp; equipment, (IA3) Inventions &amp; IP, (IA4) Synchronous value.",
+          "hpSystem.hp4.li3":
+            "Three coordination systems: (HĐPĐ), (HĐPK), (HĐPTH) with 33 concepts and 144 keyword clusters – creating a united block of experts and stakeholders developing together.",
+
+          "products.kicker": "Key product groups",
+          "products.title":
+            "Priority product groups in AFDEX planning",
+          "products.card1.title": "Agri-food products",
+          "products.card1.text":
+            "Rice, coffee, pepper, tea, fruits and vegetables – sectors directly linked to food security and exports.",
+          "products.card2.title": "Aquatic &amp; marine products",
+          "products.card2.text":
+            "Farmed and captured seafood linked to Supply–Demand Chains and Trading Points at fishing ports, farming zones and processing plants.",
+          "products.card3.title": "Traditional medicine &amp; herbs",
+          "products.card3.text":
+            "Medicinal plants and health-care products based on local knowledge with clearly traceable growing areas.",
+          "products.card4.title": "Village craft products",
+          "products.card4.text":
+            "Handicrafts and regional specialties – upgrading value chains through product coding and Supply–Demand Chains.",
+
+          "partners.kicker": "Achievements &amp; strategic partners",
+          "partners.title":
+            "An ecosystem built on domestic &amp; international cooperation",
+
+          "partners.card1.badge": "Domestic partners",
+          "partners.card1.title":
+            "Vietnam Cooperative Alliance (VCA)",
+          "partners.card1.text1":
+            "On 01/04/2021, AFDEX worked with VCA leaders to build effective Supply–Demand Chain solutions, opening the way for deep cooperation with the nationwide cooperative network.",
+          "partners.card1.li1":
+            "MARD issued documents requesting provincial People’s Committees to facilitate integrating AFDEX into the New Rural Development Programme.",
+
+          "partners.card2.badge": "International partners",
+          "partners.card2.title":
+            "Noble Network – BWA Global",
+          "partners.card2.text1":
+            "On 24/03/2021, AFDEX EcoSystem and Noble Network signed a strategic cooperation agreement to build sustainable Supply–Demand Chain solutions and expand export markets.",
+          "partners.card2.text2":
+            "At the same time, the project cooperates with <strong>BestB Capital</strong> and other investors to attract capital, creating major opportunities for partners participating in the AFDEX Ecosystem.",
+
+          "partners.card3.badge": "Science &amp; carbon credits",
+          "partners.card3.title":
+            "Universities, research institutes &amp; carbon projects",
+          "partners.card3.text1":
+            "Collaborate with universities and research institutes to apply new technologies to production – from ecological farming and processing to managing carbon credit value chains (forestation, low-carbon agriculture).",
+
+          "timeline.kicker": "History &amp; roadmap",
+          "timeline.title":
+            "From the 2010 Yearbook to the AFDEX Ecosystem 2030+",
+          "timeline.step1.text":
+            "Publish the “Vietnam Agriculture &amp; Food Yearbook – 2010”. Recognised as a social enterprise and awarded 100,000 USD by Tia Sang Foundation.",
+          "timeline.step2.text":
+            "Refine the AFDEX Ecosystem concept across four components; research 60 Supply–Demand Chains and six Trading-Point levels; build the 9-layer information system.",
+          "timeline.step3.text":
+            "Work with VCA and sign with Noble Network; MARD requests provinces to facilitate integrating AFDEX into New Rural Development programmes.",
+          "timeline.step4.text":
+            "<strong>Implementation phase:</strong> 2025–2026: pilot 5–10 Supply–Demand Chains in 2–3 provinces. 2026–2028: expand to 30+ Chains, integrate carbon credits &amp; digital banking. 2028–2030+: complete 60 Vietnam Agricultural Supply–Demand Chains and connect to international markets.",
+
+          "faq.kicker": "Frequently asked questions",
+          "faq.title":
+            "Some questions frequently raised by partners",
+          "faq.q1":
+            "How is AFDEX different from typical agricultural e-commerce platforms?",
+          "faq.a1":
+            "AFDEX is not just a place to post buy–sell listings; it is a full ecosystem: Supply–Demand Chain planning, locality-based Trading Points, public–private services and investment mechanisms. Each product, model and service is coded and attached to a specific Value Chain with partners, operating mechanisms and data.",
+          "faq.q2":
+            "If a province wants to integrate AFDEX into its New Rural programme, where should it start?",
+          "faq.a2":
+            "Typically with three steps: (1) Survey key products &amp; OCOP product chains (HP1); (2) Plan locality-based Trading Points at provincial/district/commune level (HP2); (3) Pilot some public–private service packages (HP3) attached to concrete models, then scale to the whole chain.",
+          "faq.q3":
+            "What do enterprises, cooperatives and experts gain when joining the ecosystem?",
+          "faq.a3":
+            "Each stakeholder/expert receives a dedicated code and is assigned to suitable Supply–Demand Chains, with opportunities to benefit from long-term contracts, financial services, carbon-credit programmes, technology transfer and workforce training – within a transparent and fair mechanism.",
+
+          "footer.brand.title":
+            "AFDEX Ecosystem Joint Stock Company",
+          "footer.brand.desc":
+            "Pioneering the Vietnam Agricultural Supply–Demand Ecosystem, rooted in the 2010 Agriculture &amp; Food Yearbook and more than 10 years of research and cooperation at home and abroad.",
+
+          "footer.col1.title": "AFDEX Project",
+          "footer.col1.li1":
+            "Introduction &amp; development history",
+          "footer.col1.li2":
+            "HP4 model &amp; four components",
+          "footer.col1.li3":
+            "Supply–Demand Chains &amp; Trading Points",
+
+          "footer.col2.title": "Contact",
+          "footer.col2.li1":
+            "Email: info@afdex.vn (sample)",
+          "footer.col2.li2":
+            "Phone: (+84) xxx xxx xxx",
+          "footer.col2.li3":
+            "Address: To be updated with official information",
+
+          "footer.col3.title": "Documents",
+          "footer.col3.li1": "Project description",
+          "footer.col3.li2": "Presentation slides",
+          "footer.col3.li3":
+            "Technical &amp; database documents",
+
+          "footer.col4.title": "Connect",
+          "footer.col4.li1": "Official website",
+          "footer.col4.li2": "Fanpage / Zalo OA",
+          "footer.col4.li3": "YouTube / Livestream channel",
+
+          "footer.bottom.copy": "© 2025 · AFDEX EcoSystem",
+          "footer.bottom.chip1":
+            "Vietnam Agricultural Supply–Demand Chains",
+          "footer.bottom.chip2":
+            "Multifunctional ecological agriculture",
+          "footer.bottom.chip3":
+            "Digital transformation &amp; carbon credits",
+        },
+      };
+
+      function setLanguage(lang) {
+        const html = document.documentElement;
+        html.lang = lang === "en" ? "en" : "vi";
+
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+
+          // Lưu text gốc (VI) lần đầu
+          if (!el.dataset.viText) {
+            el.dataset.viText = el.innerHTML;
+          }
+
+          if (lang === "vi") {
+            el.innerHTML = el.dataset.viText;
+          } else if (lang === "en") {
+            const dict = translations.en || {};
+            if (dict[key]) {
+              el.innerHTML = dict[key];
+            } else {
+              // nếu thiếu key EN thì giữ nguyên VI
+              el.innerHTML = el.dataset.viText;
+            }
+          }
+        });
+
+        // trạng thái active cho nút ngôn ngữ
+        document.querySelectorAll(".lang-btn").forEach((btn) => {
+          const isActive = btn.getAttribute("data-lang") === lang;
+          btn.classList.toggle("lang-active", isActive);
+        });
+      }
+
+      // ĐÁNH DẤU body loaded
       window.addEventListener("load", () => {
         document.body.classList.add("is-loaded");
       });
 
       // Smooth scroll
-      document.querySelectorAll('a[href^="#"]').forEach((a) => {
-        a.addEventListener("click", (e) => {
-          const href = a.getAttribute("href");
-          const target = document.querySelector(href);
-          if (target) {
-            e.preventDefault();
-            target.scrollIntoView({ behavior: "smooth" });
-          }
+      function initSmoothScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach((a) => {
+          a.addEventListener("click", (e) => {
+            const href = a.getAttribute("href");
+            const target = document.querySelector(href);
+            if (target) {
+              e.preventDefault();
+              target.scrollIntoView({ behavior: "smooth" });
+            }
+          });
         });
-      });
+      }
+
+      initSmoothScroll();
 
       // FAQ toggle
-      document.querySelectorAll(".faq-item").forEach((item) => {
-        const q = item.querySelector(".faq-question");
-        q.addEventListener("click", () => {
-          item.classList.toggle("active");
+      function initFAQ() {
+        document.querySelectorAll(".faq-item").forEach((item) => {
+          const q = item.querySelector(".faq-question");
+          const answer = item.querySelector(".faq-answer");
           const toggle = item.querySelector(".faq-toggle");
-          toggle.textContent = item.classList.contains("active") ? "−" : "+";
+          if (!q || !answer || !toggle) return;
+
+          q.onclick = () => {
+            const active = item.classList.toggle("active");
+            toggle.textContent = active ? "−" : "+";
+          };
         });
-      });
+      }
+
+      initFAQ();
 
       // Scroll progress + header state
       const progressEl = document.getElementById("scrollProgress");
@@ -2633,94 +3219,33 @@
           });
         });
       }
-// === Countdown đến ngày mồng 9 của tháng kế tiếp (CHUẨN – HOẠT ĐỘNG 100%) ===
-(function setupCountdownToNext9() {
-  // Modal
-  const modalTarget = document.getElementById("eta-countdown");
 
-  // Hero countdown 4 ô
-  const cdDays = document.getElementById("cd-days");
-  const cdHours = document.getElementById("cd-hours");
-  const cdMins = document.getElementById("cd-mins");
-  const cdSecs = document.getElementById("cd-secs");
-
-  // Nếu cả modal lẫn hero đều không tồn tại → stop
-  if (!modalTarget && !cdDays && !cdHours && !cdMins && !cdSecs) return;
-
-  function getNext9Date() {
-    const now = new Date();
-    let year = now.getFullYear();
-    let month = now.getMonth(); // 0–11
-
-    // Lấy tháng sau
-    month += 1;
-    if (month > 11) {
-      month = 0;
-      year++;
-    }
-
-    // Target = ngày 9, 0h00
-    return new Date(year, month, 9, 0, 0, 0);
-  }
-
-  const deadline = getNext9Date();
-
-  function updateCountdown() {
-    const now = new Date();
-    let diff = deadline - now;
-
-    if (diff < 0) diff = 0;
-
-    const totalSeconds = Math.floor(diff / 1000);
-    const days = Math.floor(totalSeconds / (24 * 60 * 60));
-    const hours = Math.floor((totalSeconds % (24 * 60 * 60)) / 3600);
-    const minutes = Math.floor((totalSeconds % 3600) / 60);
-    const seconds = totalSeconds % 60;
-
-    // Chuỗi đầy đủ cho modal
-    const fullText =
-      `${String(days).padStart(2, "0")} ngày ` +
-      `${String(hours).padStart(2, "0")} giờ ` +
-      `${String(minutes).padStart(2, "0")} phút ` +
-      `${String(seconds).padStart(2, "0")} giây`;
-
-    // Ghi vào modal
-    if (modalTarget) modalTarget.textContent = fullText;
-
-    // Ghi vào 4 ô hero
-    if (cdDays) cdDays.textContent = String(days).padStart(2, "0");
-    if (cdHours) cdHours.textContent = String(hours).padStart(2, "0");
-    if (cdMins) cdMins.textContent = String(minutes).padStart(2, "0");
-    if (cdSecs) cdSecs.textContent = String(seconds).padStart(2, "0");
-  }
-
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-})();
-
-      // === Countdown đến ngày mồng 9 của tháng kế tiếp (CHUẨN) ===
+      // === Countdown đến ngày mồng 9 của tháng kế tiếp (CHUẨN – HOẠT ĐỘNG) ===
       (function setupCountdownToNext9() {
-        const targets = [
-          document.getElementById("eta-countdown"),       // trong modal
-          document.getElementById("eta-countdown-hero"),  // ngoài hero-right
-        ].filter(Boolean);
+        // Modal
+        const modalTarget = document.getElementById("eta-countdown");
 
-        if (!targets.length) return;
+        // Hero countdown 4 ô
+        const cdDays = document.getElementById("cd-days");
+        const cdHours = document.getElementById("cd-hours");
+        const cdMins = document.getElementById("cd-mins");
+        const cdSecs = document.getElementById("cd-secs");
+
+        if (!modalTarget && !cdDays && !cdHours && !cdMins && !cdSecs) return;
 
         function getNext9Date() {
           const now = new Date();
           let year = now.getFullYear();
           let month = now.getMonth(); // 0–11
 
-          // tháng tiếp theo
+          // Lấy tháng sau
           month += 1;
-
           if (month > 11) {
             month = 0;
             year++;
           }
 
-          // target: 9, 00:00:00
+          // Target = ngày 9, 0h00
           return new Date(year, month, 9, 0, 0, 0);
         }
 
@@ -2738,23 +3263,37 @@
           const minutes = Math.floor((totalSeconds % 3600) / 60);
           const seconds = totalSeconds % 60;
 
-          const text =
+          const fullText =
             `${String(days).padStart(2, "0")} ngày ` +
             `${String(hours).padStart(2, "0")} giờ ` +
             `${String(minutes).padStart(2, "0")} phút ` +
             `${String(seconds).padStart(2, "0")} giây`;
 
-          targets.forEach((el) => {
-            el.textContent = text;
-          });
+          if (modalTarget) modalTarget.textContent = fullText;
+
+          if (cdDays) cdDays.textContent = String(days).padStart(2, "0");
+          if (cdHours) cdHours.textContent = String(hours).padStart(2, "0");
+          if (cdMins) cdMins.textContent = String(minutes).padStart(2, "0");
+          if (cdSecs) cdSecs.textContent = String(seconds).padStart(2, "0");
         }
 
         updateCountdown();
         setInterval(updateCountdown, 1000);
       })();
+
+      // Gắn sự kiện nút ngôn ngữ + set mặc định VI
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".lang-btn").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const lang = btn.getAttribute("data-lang");
+            setLanguage(lang);
+            initFAQ(); // FAQ mới vẫn hoạt động sau khi đổi ngôn ngữ
+          });
+        });
+
+        // Mặc định tiếng Việt (lưu text gốc)
+        setLanguage("vi");
+      });
     </script>
   </body>
 </html>
-
-
-
