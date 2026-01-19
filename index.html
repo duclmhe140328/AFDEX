@@ -30,6 +30,26 @@
         --radius-lg: 18px;
         --shadow-soft: 0 26px 72px rgba(0, 0, 0, 0.95);
       }
+.hero-cta {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.hero-cta-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #ff5f8f, #ff9aa2);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.hero-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 95, 143, 0.35);
+}
 
       .notice-countdown {
         display: inline-block;
@@ -1671,7 +1691,7 @@
                     <a href="#lo-trinh" data-i18n="nav.timeline">Hành trình dự
                         án</a>
                     <a href="#faq" data-i18n="nav.faq">FAQ</a>
-                    <a href="https://0ff67a3b066b.ngrok-free.app/" data-i18n="nav.faq">Vào website của chúng tôi</a>
+                    <a href="https://0ff67a3b066b.ngrok-free.app/">Vào website của chúng tôi</a>
                 </div>
 
                 <div class="nav-right">
@@ -1854,48 +1874,47 @@
                                 <span
                                     class="hero-countdown-subtitle"
                                     data-i18n="countdown.subtitle">
-                                    Mốc triển khai & mở rộng Hệ sinh thái AFDEX
+                                    Mốc triển khai & mở rộng Hệ sinh thái AFDEX 
                                 </span>
                             </div>
 
-                            <div class="hero-countdown-row">
-                                <div class="hero-countdown-pill">
-                                    <span class="hero-countdown-number"
-                                        id="cd-days">00</span>
-                                    <span
-                                        class="hero-countdown-label"
-                                        data-i18n="countdown.dayLabel">
-                                        Ngày
-                                    </span>
-                                </div>
-                                <div class="hero-countdown-pill">
-                                    <span class="hero-countdown-number"
-                                        id="cd-hours">00</span>
-                                    <span
-                                        class="hero-countdown-label"
-                                        data-i18n="countdown.hourLabel">
-                                        Giờ
-                                    </span>
-                                </div>
-                                <div class="hero-countdown-pill">
-                                    <span class="hero-countdown-number"
-                                        id="cd-mins">00</span>
-                                    <span
-                                        class="hero-countdown-label"
-                                        data-i18n="countdown.minuteLabel">
-                                        Phút
-                                    </span>
-                                </div>
-                                <div class="hero-countdown-pill">
-                                    <span class="hero-countdown-number"
-                                        id="cd-secs">00</span>
-                                    <span
-                                        class="hero-countdown-label"
-                                        data-i18n="countdown.secondLabel">
-                                        Giây
-                                    </span>
-                                </div>
-                            </div>
+                           <div class="hero-countdown-row">
+    <div class="hero-countdown-pill">
+        <span class="hero-countdown-number" id="cd-days">00</span>
+        <span class="hero-countdown-label" data-i18n="countdown.dayLabel">
+            Ngày
+        </span>
+    </div>
+
+    <div class="hero-countdown-pill">
+        <span class="hero-countdown-number" id="cd-hours">00</span>
+        <span class="hero-countdown-label" data-i18n="countdown.hourLabel">
+            Giờ
+        </span>
+    </div>
+
+    <div class="hero-countdown-pill">
+        <span class="hero-countdown-number" id="cd-mins">00</span>
+        <span class="hero-countdown-label" data-i18n="countdown.minuteLabel">
+            Phút
+        </span>
+    </div>
+
+    <div class="hero-countdown-pill">
+        <span class="hero-countdown-number" id="cd-secs">00</span>
+        <span class="hero-countdown-label" data-i18n="countdown.secondLabel">
+            Giây
+        </span>
+    </div>
+</div>
+
+<!-- NÚT CTA -->
+<div class="hero-cta">
+    <a href="https://0ff67a3b066b.ngrok-free.app/" class="hero-cta-btn">
+        Vào website của chúng tôi
+    </a>
+</div>
+
                         </div>
                     </div>
                 </div>
@@ -3402,4 +3421,3 @@
     </script>
     </body>
 </html>
-
